@@ -1,27 +1,39 @@
 // =========================
-// SCROLL SUAVE
+// MENÚ MÓVIL
 // =========================
 
-const links =
-document.querySelectorAll('a[href^="#"]');
+const menuToggle =
+document.getElementById("menuToggle");
+
+const mainNav =
+document.getElementById("mainNav");
 
 
-links.forEach(link => {
+if (menuToggle && mainNav) {
 
-    link.addEventListener("click", e => {
+    menuToggle.addEventListener("click", () => {
 
-        const target =
-        document.querySelector(
-            link.getAttribute("href")
-        );
+        mainNav.classList.toggle("active");
 
-        if (!target) return;
+    });
 
-        e.preventDefault();
+}
 
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
+
+
+// =========================
+// CERRAR MENÚ AL NAVEGAR
+// =========================
+
+const navLinks =
+document.querySelectorAll("#mainNav a");
+
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mainNav.classList.remove("active");
 
     });
 
@@ -30,7 +42,7 @@ links.forEach(link => {
 
 
 // =========================
-// NEWSLETTER
+// FORMULARIO COMUNIDAD
 // =========================
 
 const form =
@@ -43,21 +55,38 @@ if (form) {
 
         e.preventDefault();
 
+        const name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
         const email =
         document
         .getElementById("email")
         .value
         .trim();
 
-        if (!email) return;
+        const interest =
+        document
+        .getElementById("interest")
+        .value;
 
-        const existingMessage =
+        if (
+            !name ||
+            !email ||
+            !interest
+        ) {
+            return;
+        }
+
+        const oldMessage =
         document.querySelector(
             ".success-message"
         );
 
-        if (existingMessage) {
-            existingMessage.remove();
+        if (oldMessage) {
+            oldMessage.remove();
         }
 
         const message =
@@ -67,7 +96,7 @@ if (form) {
         "success-message";
 
         message.textContent =
-        "Gracias por suscribirte a Metrion Partners.";
+        `Gracias ${name}, tu solicitud fue recibida.`;
 
         form.appendChild(message);
 
@@ -77,8 +106,8 @@ if (form) {
 
             message.remove();
 
-        }, 3000);
+        }, 5000);
 
     });
 
-                }
+}
