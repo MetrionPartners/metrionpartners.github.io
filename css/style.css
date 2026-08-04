@@ -1,1 +1,32 @@
+:root{
+    --bg:#050505;
+    --surface:#111111;
+    --surface-2:#181818;
+    --gold:#D4AF37;
+    --text:#ffffff;
+    --text-secondary:#b7b7b7;
+    --border:#2a2a2a;
+    --radius:20px;
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+}
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
