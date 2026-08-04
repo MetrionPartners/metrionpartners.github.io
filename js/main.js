@@ -1,71 +1,84 @@
-// Metrion Partners
-// Funciones principales del sitio
+// =========================
+// SCROLL SUAVE
+// =========================
+
+const links =
+document.querySelectorAll('a[href^="#"]');
 
 
-document.addEventListener("DOMContentLoaded", () => {
+links.forEach(link => {
 
+    link.addEventListener("click", e => {
 
-    // Confirmación de carga del sitio
-    console.log("Metrion Partners cargado correctamente");
+        const target =
+        document.querySelector(
+            link.getAttribute("href")
+        );
 
+        if (!target) return;
 
-    // Scroll suave para enlaces internos
-    const links = document.querySelectorAll('a[href^="#"]');
+        e.preventDefault();
 
-
-    links.forEach(link => {
-
-        link.addEventListener("click", function(e) {
-
-            const target = document.querySelector(
-                this.getAttribute("href")
-            );
-
-
-            if (target) {
-
-                e.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
-
+        target.scrollIntoView({
+            behavior: "smooth"
         });
 
     });
 
-
-
-    // Formulario de newsletter
-    const form = document.getElementById("subscribeForm");
-
-
-    if (form) {
-
-        form.addEventListener("submit", function(e) {
-
-            e.preventDefault();
-
-
-            const email = document.getElementById("email").value;
-
-
-            if(email){
-
-                alert(
-                    "Gracias por suscribirte a Metrion Partners"
-                );
-
-
-                form.reset();
-
-            }
-
-        });
-
-    }
-
-
 });
+
+
+
+// =========================
+// NEWSLETTER
+// =========================
+
+const form =
+document.getElementById("subscribeForm");
+
+
+if (form) {
+
+    form.addEventListener("submit", e => {
+
+        e.preventDefault();
+
+        const email =
+        document
+        .getElementById("email")
+        .value
+        .trim();
+
+        if (!email) return;
+
+        const existingMessage =
+        document.querySelector(
+            ".success-message"
+        );
+
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        const message =
+        document.createElement("p");
+
+        message.className =
+        "success-message";
+
+        message.textContent =
+        "Gracias por suscribirte a Metrion Partners.";
+
+        form.appendChild(message);
+
+        form.reset();
+
+        setTimeout(() => {
+
+            message.remove();
+
+        }, 3000);
+
+    });
+
+                }
