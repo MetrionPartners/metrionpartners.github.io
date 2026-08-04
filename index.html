@@ -1,527 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Metrion Partners</title>
+    <title>DIOValue | Finanzas, Inversiones y Oportunidades</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="DIOValue analiza finanzas, inversiones, criptomonedas, apuestas y oportunidades digitales.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Inter',sans-serif;
-      background:#050505;
-      color:white;
-      line-height:1.6;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      padding:80px 0;
-
-      background:
-      radial-gradient(circle at top,
-      #1a1a1a 0%,
-      #0b0b0b 45%,
-      #000000 100%);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:60px;
-      align-items:center;
-    }
-
-    .badge{
-      display:inline-block;
-      padding:10px 18px;
-      border-radius:999px;
-
-      background:rgba(212,175,55,0.08);
-      border:1px solid rgba(212,175,55,0.2);
-
-      color:#d4af37;
-      margin-bottom:24px;
-      font-size:14px;
-      letter-spacing:0.5px;
-    }
-
-    h1{
-      font-size:clamp(3rem,7vw,5.8rem);
-      line-height:1.02;
-      font-weight:900;
-      margin-bottom:24px;
-      letter-spacing:-2px;
-    }
-
-    .gold{
-      color:#d4af37;
-    }
-
-    .hero p{
-      color:#b5bcc7;
-      font-size:18px;
-      margin-bottom:36px;
-      max-width:620px;
-    }
-
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-    }
-
-    .btn{
-      padding:16px 28px;
-      border-radius:18px;
-      font-weight:700;
-      transition:0.3s ease;
-      display:inline-block;
-    }
-
-    .btn-primary{
-      background:#d4af37;
-      color:black;
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 25px rgba(212,175,55,0.25);
-    }
-
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,0.12);
-      color:white;
-      background:rgba(255,255,255,0.03);
-    }
-
-    .btn-secondary:hover{
-      border-color:rgba(212,175,55,0.35);
-      background:rgba(255,255,255,0.05);
-    }
-
-    /* CARD */
-
-    .card{
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:30px;
-      padding:40px;
-      backdrop-filter:blur(12px);
-      box-shadow:0 20px 60px rgba(0,0,0,0.4);
-    }
-
-    .card h2{
-      font-size:2rem;
-      margin-bottom:12px;
-    }
-
-    .card p{
-      color:#c0c7d2;
-      margin-bottom:24px;
-    }
-
-    .mini-card{
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:18px;
-      padding:18px;
-      margin-top:16px;
-      color:#d7dce3;
-      transition:0.3s ease;
-    }
-
-    .mini-card:hover{
-      border-color:rgba(212,175,55,0.25);
-      transform:translateX(4px);
-    }
-
-    /* SECTIONS */
-
-    section{
-      padding:100px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-
-    .section-title h2{
-      font-size:3rem;
-      margin-bottom:16px;
-    }
-
-    .section-title p{
-      color:#9ea7b3;
-      max-width:720px;
-      margin:auto;
-    }
-
-    /* SERVICES */
-
-    .services{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-    }
-
-    .service-box{
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.07);
-      padding:30px;
-      border-radius:28px;
-      transition:0.3s ease;
-    }
-
-    .service-box:hover{
-      border-color:rgba(212,175,55,0.4);
-      transform:translateY(-6px);
-      box-shadow:0 15px 40px rgba(0,0,0,0.3);
-    }
-
-    .service-icon{
-      font-size:42px;
-      margin-bottom:18px;
-    }
-
-    .service-box h3{
-      margin-bottom:12px;
-      font-size:22px;
-    }
-
-    .service-box p{
-      color:#aab2bd;
-    }
-
-    /* PHILOSOPHY */
-
-    .philosophy{
-      background:rgba(255,255,255,0.03);
-      border-top:1px solid rgba(255,255,255,0.06);
-      border-bottom:1px solid rgba(255,255,255,0.06);
-      text-align:center;
-    }
-
-    .philosophy p{
-      max-width:900px;
-      margin:auto;
-      color:#c7ced8;
-      font-size:20px;
-    }
-
-    /* CTA */
-
-    .cta{
-      background:linear-gradient(135deg,#d4af37,#f5d76e);
-      color:black;
-      border-radius:36px;
-      padding:70px 50px;
-      text-align:center;
-      box-shadow:0 20px 60px rgba(212,175,55,0.15);
-    }
-
-    .cta h2{
-      font-size:3rem;
-      margin-bottom:18px;
-      line-height:1.1;
-    }
-
-    .cta p{
-      margin-bottom:30px;
-      opacity:0.8;
-      font-size:18px;
-      max-width:720px;
-      margin-inline:auto;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:40px 20px;
-      text-align:center;
-      color:#8f98a3;
-      border-top:1px solid rgba(255,255,255,0.06);
-      font-size:15px;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .hero{
-        text-align:center;
-      }
-
-      .buttons{
-        justify-content:center;
-      }
-
-      .card{
-        padding:30px;
-      }
-
-      .cta{
-        padding:45px 24px;
-      }
-
-      .cta h2{
-        font-size:2.2rem;
-      }
-
-      .section-title h2{
-        font-size:2.3rem;
-      }
-
-    }
-
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HERO -->
+<header class="header">
+    <div class="logo">
+        DIO<span>Value</span>
+    </div>
 
-  <section class="hero">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#finanzas">Finanzas</a>
+        <a href="#cripto">Cripto</a>
+        <a href="#apuestas">Apuestas</a>
+        <a href="#negocios">Negocios</a>
+    </nav>
+</header>
 
-    <div class="container hero-grid">
 
-      <div>
+<section id="inicio" class="hero">
 
-        <div class="badge">
-          Derecho · Finanzas · Protección Patrimonial
-        </div>
+    <div class="hero-content">
 
         <h1>
-          Soluciones <span class="gold">legales</span><br>
-          y financieras.
+            Analizamos oportunidades.
+            <span>Convertimos información en valor.</span>
         </h1>
 
         <p>
-          En Metrion Partners combinamos estrategia jurídica y visión financiera para ayudarte a proteger, estructurar y construir patrimonio con enfoque moderno y global.
+            Finanzas, inversiones, criptomonedas, apuestas deportivas
+            y negocios digitales explicados de forma estratégica.
         </p>
 
-        <div class="buttons">
-
-          <a class="btn btn-primary"
-             href="https://wa.me/522297509689"
-             target="_blank">
-
-            Hablar por WhatsApp
-
-          </a>
-
-          <a class="btn btn-secondary"
-             href="#servicios">
-
-            Ver servicios
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <h2>
-          Estrategia Patrimonial Integral
-        </h2>
-
-        <p>
-          Soluciones enfocadas en estabilidad financiera, protección legal y crecimiento patrimonial estratégico.
-        </p>
-
-        <div class="mini-card">
-          ✔ Protección patrimonial y estructuración legal
-        </div>
-
-        <div class="mini-card">
-          ✔ Planeación financiera e inversión
-        </div>
-
-        <div class="mini-card">
-          ✔ Consultoría jurídica corporativa
-        </div>
-
-        <div class="mini-card">
-          ✔ Estrategias modernas de crecimiento patrimonial
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SERVICES -->
-
-  <section id="servicios">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Servicios</h2>
-
-        <p>
-          Soluciones estratégicas orientadas a protección patrimonial, crecimiento financiero y estructura jurídica moderna.
-        </p>
-
-      </div>
-
-      <div class="services">
-
-        <div class="service-box">
-          <div class="service-icon">⚖️</div>
-
-          <h3>Asesoría Jurídica</h3>
-
-          <p>
-            Estrategias legales enfocadas en protección patrimonial, contratos y estructura corporativa.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <div class="service-icon">🏛️</div>
-
-          <h3>Protección Patrimonial</h3>
-
-          <p>
-            Soluciones para proteger activos, patrimonio y estabilidad financiera.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <div class="service-icon">📈</div>
-
-          <h3>Planeación Financiera</h3>
-
-          <p>
-            Estrategias de crecimiento, inversión y administración financiera moderna.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <div class="service-icon">🌍</div>
-
-          <h3>Consultoría Global</h3>
-
-          <p>
-            Visión internacional en derecho, finanzas y estructura empresarial.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <div class="service-icon">🛡️</div>
-
-          <h3>Estrategia Fiscal</h3>
-
-          <p>
-            Optimización y análisis estratégico enfocado en estabilidad y protección.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <div class="service-icon">💼</div>
-
-          <h3>Consultoría Empresarial</h3>
-
-          <p>
-            Soluciones para empresas, emprendedores e inversionistas.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PHILOSOPHY -->
-
-  <section class="philosophy">
-
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Filosofía</h2>
-      </div>
-
-      <p>
-        En Metrion Partners creemos que el patrimonio necesita más que crecimiento: necesita estructura, protección y visión estratégica. Integramos derecho y finanzas para construir soluciones sólidas, modernas y orientadas al largo plazo.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- CTA -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="cta">
-
-        <h2>
-          Protege y construye tu patrimonio con visión estratégica.
-        </h2>
-
-        <p>
-          Agenda una conversación personalizada y descubre cómo integrar estrategia legal y financiera en tu crecimiento patrimonial.
-        </p>
-
-        <a class="btn btn-primary"
-           href="https://wa.me/522297509689"
-           target="_blank">
-
-          Contactar por WhatsApp
-
+        <a href="#categorias" class="btn">
+            Explorar categorías
         </a>
 
-      </div>
-
     </div>
 
-  </section>
+</section>
 
-  <!-- FOOTER -->
 
-  <footer>
-    © 2026 Metrion Partners · Derecho · Finanzas · Estrategia Patrimonial
-  </footer>
+
+<section id="categorias" class="categories">
+
+<h2>Explora nuestras categorías</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>💰 Finanzas</h3>
+
+<p>
+Educación financiera, ahorro, inversiones,
+renta fija y estrategias para mejorar tu patrimonio.
+</p>
+
+<a href="#">
+Ver más →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>₿ Criptomonedas</h3>
+
+<p>
+Análisis de mercado, proyectos blockchain,
+trading y tendencias del ecosistema crypto.
+</p>
+
+<a href="#">
+Ver más →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🎯 Apuestas deportivas</h3>
+
+<p>
+Análisis estadístico, probabilidades,
+estrategias y mercados deportivos.
+</p>
+
+<a href="#">
+Ver más →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚀 Negocios digitales</h3>
+
+<p>
+Ideas de negocio, herramientas online,
+marketing y oportunidades digitales.
+</p>
+
+<a href="#">
+Ver más →
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+<section id="finanzas" class="section">
+
+    <h2>Finanzas</h2>
+
+    <p>
+        Contenido enfocado en educación financiera,
+        inversión inteligente y construcción de patrimonio.
+    </p>
+
+</section>
+
+
+
+<section id="cripto" class="section">
+
+    <h2>Criptomonedas</h2>
+
+    <p>
+        Seguimiento del mercado crypto, análisis de activos,
+        tendencias y herramientas para tomar mejores decisiones.
+    </p>
+
+</section>
+
+
+
+<section id="apuestas" class="section">
+
+    <h2>Apuestas deportivas</h2>
+
+    <p>
+        Modelos estadísticos, análisis de partidos,
+        gestión de riesgo y búsqueda de valor en mercados deportivos.
+    </p>
+
+</section>
+
+
+
+<section id="negocios" class="section">
+
+    <h2>Negocios digitales</h2>
+
+    <p>
+        Estrategias para crear proyectos online,
+        automatización, marketing y nuevas oportunidades.
+    </p>
+
+</section>
+
+
+
+<section class="newsletter">
+
+    <h2>Únete a DIOValue</h2>
+
+    <p>
+        Recibe análisis y nuevas oportunidades directamente.
+    </p>
+
+
+    <form id="subscribeForm">
+
+        <input 
+        type="email" 
+        id="email"
+        placeholder="Tu correo electrónico"
+        required>
+
+        <button type="submit">
+            Suscribirme
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        DIO<span>Value</span>
+    </div>
+
+
+    <p>
+        © 2026 DIOValue. Todos los derechos reservados.
+    </p>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
-  </html>
+
+</html>
