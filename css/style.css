@@ -341,6 +341,16 @@ section h2 {
 
 }
 
+.success-message {
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    color: #22c55e;
+
+}
+
 
 
 .newsletter input {
