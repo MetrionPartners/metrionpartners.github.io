@@ -1,8 +1,4 @@
-// =========================
-// MENÚ MÓVIL
-// =========================
-
-console.log("JS cargado");
+alert("JS cargado");
 
 const menuToggle =
 document.getElementById("menuToggle");
