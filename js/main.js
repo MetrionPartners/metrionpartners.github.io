@@ -1,93 +1,71 @@
-// ===============================
 // Metrion Partners
-// Main JavaScript
-// ===============================
+// Funciones principales del sitio
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initNavbar();
 
-    initRevealAnimations();
+    // Confirmación de carga del sitio
+    console.log("Metrion Partners cargado correctamente");
 
-    initBackToTop();
 
-});
+    // Scroll suave para enlaces internos
+    const links = document.querySelectorAll('a[href^="#"]');
 
-// ===============================
-// Navbar
-// ===============================
 
-function initNavbar(){
+    links.forEach(link => {
 
-    const header = document.querySelector("header");
+        link.addEventListener("click", function(e) {
 
-    if(!header) return;
+            const target = document.querySelector(
+                this.getAttribute("href")
+            );
 
-    window.addEventListener("scroll", ()=>{
 
-        if(window.scrollY > 50){
-            header.classList.add("scrolled");
-        }else{
-            header.classList.remove("scrolled");
-        }
+            if (target) {
 
-    });
+                e.preventDefault();
 
-}
-
-// ===============================
-// Reveal Animations
-// ===============================
-
-function initRevealAnimations(){
-
-    const elements = document.querySelectorAll(".reveal");
-
-    if(!elements.length) return;
-
-    const observer = new IntersectionObserver((entries)=>{
-
-        entries.forEach(entry=>{
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("show");
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
 
             }
 
         });
 
-    },{
-        threshold:0.15
     });
 
-    elements.forEach(el=>observer.observe(el));
 
-}
 
-// ===============================
-// Back To Top
-// ===============================
+    // Formulario de newsletter
+    const form = document.getElementById("subscribeForm");
 
-function initBackToTop(){
 
-    const btn = document.querySelector("#backToTop");
+    if (form) {
 
-    if(!btn) return;
+        form.addEventListener("submit", function(e) {
 
-    window.addEventListener("scroll",()=>{
+            e.preventDefault();
 
-        btn.classList.toggle("visible",window.scrollY>500);
 
-    });
+            const email = document.getElementById("email").value;
 
-    btn.addEventListener("click",()=>{
 
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
+            if(email){
+
+                alert(
+                    "Gracias por suscribirte a Metrion Partners"
+                );
+
+
+                form.reset();
+
+            }
+
         });
 
-    });
+    }
 
-      }
+
+});
