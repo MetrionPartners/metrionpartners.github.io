@@ -1,5 +1,3 @@
-alert("JS cargado");
-
 const menuToggle =
 document.getElementById("menuToggle");
 
