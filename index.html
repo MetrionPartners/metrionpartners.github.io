@@ -9,390 +9,603 @@
 
   <meta
     name="description"
-    content="Encuentra docentes, asesores y especialistas en MetrionPartners. Conecta con profesionales de distintas áreas del conocimiento y los servicios."
+    content="Encuentra docentes, asesores, consultores y especialistas en MetrionPartners. Conecta con profesionales de distintas áreas."
   >
 
-  <meta name="theme-color" content="#172033">
+  <meta name="theme-color" content="#101a35">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
 
-  <!-- CABECERA -->
+  <!-- ENCABEZADO -->
   <header class="header">
-    <a href="index.html" class="logo" aria-label="MetrionPartners, inicio">
-      Metrion<span>Partners</span>
-    </a>
+    <div class="container">
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Abrir menú de navegación"
-      aria-controls="mainNav"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
+      <a class="logo" href="index.html" aria-label="MetrionPartners, inicio">
+        Metrion<span>Partners</span>
+      </a>
 
-    <nav id="mainNav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="categorias/docentes.html">Docentes</a>
-      <a href="categorias/asesores.html">Asesores</a>
-      <a href="categorias/consultoria.html">Consultoría</a>
-      <a href="#profesionales">Profesionales</a>
-      <a href="membresias.html">Membresías</a>
-    </nav>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        ☰
+      </button>
+
+      <nav id="mainNav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="categorias/docentes.html">Docentes</a>
+        <a href="categorias/asesores.html">Asesores</a>
+        <a href="categorias/consultoria.html">Consultoría</a>
+        <a href="#categorias">Especialidades</a>
+        <a href="#membresias">Para profesionales</a>
+      </nav>
+
+    </div>
   </header>
 
 
   <main>
 
-    <!-- HERO PRINCIPAL -->
-    <section class="hero">
-      <div class="hero-content">
+    <!-- PORTADA -->
+    <section class="directory-hero">
+      <div class="container directory-hero-inner">
 
-        <p>CONOCIMIENTO · EXPERIENCIA · CONEXIONES</p>
+        <div class="hero-content">
 
-        <h1>
-          Encuentra al profesional adecuado.
-          <span>Conecta con el conocimiento que necesitas.</span>
-        </h1>
+          <span class="hero-badge">
+            Profesionales · Conocimiento · Conexiones
+          </span>
 
-        <p>
-          Descubre docentes, asesores y especialistas que ofrecen
-          sus conocimientos, experiencia y servicios en distintas
-          áreas profesionales.
-        </p>
+          <h1>
+            Encuentra a la persona indicada para lo que necesitas.
+          </h1>
 
-        <a href="#profesionales" class="btn">
-          Explorar profesionales
-        </a>
+          <p>
+            Explora perfiles de docentes, asesores, consultores y
+            especialistas. Encuentra conocimientos y servicios que
+            te ayuden a avanzar.
+          </p>
+
+          <form
+            class="directory-search"
+            id="directorySearch"
+            role="search"
+          >
+            <label class="visually-hidden" for="professionalQuery">
+              Buscar profesionales por nombre, área o especialidad
+            </label>
+
+            <input
+              type="search"
+              id="professionalQuery"
+              name="q"
+              placeholder="¿Qué necesitas encontrar?"
+              autocomplete="off"
+            >
+
+            <button class="btn" type="submit">
+              Buscar
+            </button>
+          </form>
+
+          <p class="hero-note">
+            Docencia, tecnología, negocios, ciencias y más.
+          </p>
+
+        </div>
+
+
+        <div class="hero-side-card">
+
+          <div class="hero-card-top">
+            <span class="hero-card-label">Conocimiento especializado</span>
+            <span class="hero-card-icon">✦</span>
+          </div>
+
+          <h2>Las conexiones correctas abren nuevas posibilidades.</h2>
+
+          <p>
+            Un espacio para descubrir profesionales y acercarte
+            al conocimiento que estás buscando.
+          </p>
+
+          <div class="mini-avatars" aria-hidden="true">
+            <span>EM</span>
+            <span>CM</span>
+            <span>VC</span>
+            <span>+</span>
+          </div>
+
+          <a href="#profesionales" class="hero-card-link">
+            Explorar profesionales <span>→</span>
+          </a>
+
+        </div>
 
       </div>
     </section>
 
 
-    <!-- PROPUESTA DE VALOR -->
-    <section>
-      <h2>Conocimiento que conecta personas</h2>
+    <!-- PROFESIONALES -->
+    <section class="directory-section" id="profesionales">
+      <div class="container directory-container">
 
-      <p>
-        MetrionPartners reúne profesionales de diferentes disciplinas
-        en un espacio diseñado para facilitar el descubrimiento
-        de conocimientos, servicios y oportunidades de colaboración.
-      </p>
+        <div class="directory-heading">
+          <div>
+            <span class="section-eyebrow">Directorio profesional</span>
+            <h2>Profesionales destacados</h2>
+            <p>
+              Explora distintas áreas de conocimiento y servicios.
+            </p>
+          </div>
 
-      <div class="cards">
+          <span class="result-count" id="resultCount">
+            7 perfiles
+          </span>
+        </div>
 
-        <article class="card">
-          <h3>Docentes</h3>
 
+        <div class="directory-grid" id="professionalGrid">
+
+          <!-- PERFIL DEL FUNDADOR -->
+          <article
+            class="professional-card founder-card"
+            data-search="tu nombre profesional fundador docente asesor finanzas informática ingenieria de audio producción musical tecnología programación"
+          >
+
+            <div class="profile-picture">
+              <!-- Sustituye este bloque por tu fotografía cuando la tengas. -->
+              <span class="photo-placeholder" aria-label="Fotografía pendiente">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="38"
+                  height="38"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Fundador de MetrionPartners</span>
+
+            <h3>Tu nombre profesional</h3>
+
+            <p class="profile-role">
+              Docente, asesor y especialista
+            </p>
+
+            <div class="profile-tags">
+              <span>Finanzas</span>
+              <span>Informática</span>
+              <span>Audio profesional</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: DOCENCIA -->
+          <article
+            class="professional-card"
+            data-search="elena martínez docente matemáticas ciencias educación asesoría académica"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Docencia</span>
+
+            <h3>Dra. Elena Martínez</h3>
+
+            <p class="profile-role">
+              Docente de matemáticas y ciencias
+            </p>
+
+            <div class="profile-tags">
+              <span>Matemáticas</span>
+              <span>Ciencias</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: FINANZAS -->
+          <article
+            class="professional-card"
+            data-search="carlos mendoza asesor finanzas contabilidad impuestos administración"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Asesoría</span>
+
+            <h3>Carlos Mendoza</h3>
+
+            <p class="profile-role">
+              Asesor financiero y contable
+            </p>
+
+            <div class="profile-tags">
+              <span>Finanzas</span>
+              <span>Contabilidad</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: TECNOLOGÍA -->
+          <article
+            class="professional-card"
+            data-search="valeria cruz ingeniera sistemas programación tecnología desarrollo software informática"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Tecnología</span>
+
+            <h3>Ing. Valeria Cruz</h3>
+
+            <p class="profile-role">
+              Especialista en sistemas y programación
+            </p>
+
+            <div class="profile-tags">
+              <span>Programación</span>
+              <span>Sistemas</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: AUDIO -->
+          <article
+            class="professional-card"
+            data-search="miguel herrera producción musical ingeniería audio sonido grabación mezcla tecnología musical"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Audio profesional</span>
+
+            <h3>Miguel Herrera</h3>
+
+            <p class="profile-role">
+              Especialista en producción musical
+            </p>
+
+            <div class="profile-tags">
+              <span>Audio</span>
+              <span>Producción musical</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: CONSULTORÍA -->
+          <article
+            class="professional-card"
+            data-search="sofia ramírez consultoría estrategia negocios administración organización empresarial"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Consultoría</span>
+
+            <h3>Sofía Ramírez</h3>
+
+            <p class="profile-role">
+              Consultora en estrategia y negocios
+            </p>
+
+            <div class="profile-tags">
+              <span>Estrategia</span>
+              <span>Negocios</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+
+          <!-- PERFIL DE EJEMPLO: SALUD -->
+          <article
+            class="professional-card"
+            data-search="andrea torres salud bienestar orientación servicios profesionales"
+          >
+
+            <div class="profile-picture">
+              <span class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <circle cx="8.5" cy="10" r="1.5"></circle>
+                  <path d="m21 15-5-5L5 19"></path>
+                </svg>
+              </span>
+            </div>
+
+            <span class="profile-status">Bienestar</span>
+
+            <h3>Andrea Torres</h3>
+
+            <p class="profile-role">
+              Especialista en salud y bienestar
+            </p>
+
+            <div class="profile-tags">
+              <span>Salud</span>
+              <span>Bienestar</span>
+            </div>
+
+            <a href="#contacto" class="profile-button">
+              Conocer perfil <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <div class="no-results" id="noResults" hidden>
+          <h3>No encontramos coincidencias</h3>
           <p>
-            Encuentra profesionales dedicados a la enseñanza,
-            las clases particulares y la formación especializada.
+            Prueba con otro nombre, especialidad o área de conocimiento.
           </p>
-
-          <a href="categorias/docentes.html">
-            Explorar docentes →
-          </a>
-        </article>
-
-        <article class="card">
-          <h3>Asesores</h3>
-
-          <p>
-            Conoce especialistas que pueden orientarte en temas
-            académicos, técnicos, financieros y profesionales.
-          </p>
-
-          <a href="categorias/asesores.html">
-            Explorar asesores →
-          </a>
-        </article>
-
-        <article class="card">
-          <h3>Consultoría y servicios</h3>
-
-          <p>
-            Descubre profesionales que ofrecen conocimientos
-            y soluciones para diferentes necesidades.
-          </p>
-
-          <a href="categorias/consultoria.html">
-            Explorar servicios →
-          </a>
-        </article>
+        </div>
 
       </div>
     </section>
 
 
-    <!-- PROFESIONALES DE PORTADA -->
-    <section id="profesionales">
+    <!-- ESPECIALIDADES -->
+    <section class="categories-section" id="categorias">
+      <div class="container">
 
-      <h2>Profesionales destacados</h2>
+        <div class="directory-heading">
+          <div>
+            <span class="section-eyebrow">Explora por área</span>
+            <h2>Encuentra tu especialidad</h2>
+            <p>
+              Accede a las áreas de conocimiento disponibles en el directorio.
+            </p>
+          </div>
+        </div>
 
-      <p>
-        Conoce a los especialistas que forman parte de
-        MetrionPartners y descubre sus áreas de experiencia.
-      </p>
 
+        <div class="category-grid">
 
-      <!-- PERFIL DEL FUNDADOR -->
-      <div class="cards">
-
-        <article class="card">
-          <p>FUNDADOR DE METRIONPARTNERS</p>
-
-          <h3>Docente, asesor y especialista</h3>
-
-          <p>
-            Finanzas, informática e ingeniería de audio.
-            Un perfil multidisciplinario orientado al conocimiento,
-            la tecnología y la formación profesional.
-          </p>
-
-          <a href="profesionales/tu-perfil.html" class="btn">
-            Conocer perfil
+          <a class="category-item" href="especialidades/educacion.html">
+            <span class="category-icon">✎</span>
+            <span class="category-name">Educación</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 1 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Este espacio estará destinado a presentar brevemente
-            la especialidad y los servicios de un profesional.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/tecnologia.html">
+            <span class="category-icon">⌘</span>
+            <span class="category-name">Tecnología</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 2 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Presenta tu experiencia, tus principales áreas
-            de especialización y los servicios que ofreces.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/negocios.html">
+            <span class="category-icon">$</span>
+            <span class="category-name">Negocios y finanzas</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 3 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Un espacio para dar visibilidad a tus conocimientos
-            y facilitar que las personas conozcan tu trabajo.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/ingenieria.html">
+            <span class="category-icon">⚙</span>
+            <span class="category-name">Ingeniería</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 4 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Describe tu especialidad y ayuda a los visitantes
-            a identificar cómo puedes atender sus necesidades.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/ciencias.html">
+            <span class="category-icon">⚗</span>
+            <span class="category-name">Ciencias</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 5 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Presenta tus servicios profesionales y destaca
-            aquello que te diferencia en tu disciplina.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/humanidades.html">
+            <span class="category-icon">◇</span>
+            <span class="category-name">Humanidades</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
 
-
-        <!-- PLAZA PREMIUM 6 -->
-        <article class="card">
-          <p>PROFESIONAL DESTACADO</p>
-
-          <h3>Tu nombre profesional</h3>
-
-          <p>
-            Da a conocer tu perfil, tu experiencia
-            y las soluciones profesionales que proporcionas.
-          </p>
-
-          <a href="membresias.html" class="btn">
-            Solicitar información
+          <a class="category-item" href="especialidades/salud.html">
+            <span class="category-icon">✚</span>
+            <span class="category-name">Salud y bienestar</span>
+            <span class="category-arrow">↗</span>
           </a>
-        </article>
+
+          <a class="category-item" href="especialidades/turismo.html">
+            <span class="category-icon">⌁</span>
+            <span class="category-name">Turismo y hospitalidad</span>
+            <span class="category-arrow">↗</span>
+          </a>
+
+        </div>
 
       </div>
-
-      <p>
-        ¿Eres docente, asesor o especialista?
-      </p>
-
-      <a href="membresias.html" class="btn">
-        Conoce las membresías
-      </a>
-
     </section>
 
 
-    <!-- CÓMO FUNCIONA -->
-    <section>
+    <!-- MEMBRESÍAS -->
+    <section class="membership-section" id="membresias">
+      <div class="container">
 
-      <h2>Una plataforma para conectar conocimientos</h2>
+        <div class="membership-panel">
 
-      <div class="cards">
+          <div class="membership-content">
+            <span class="section-eyebrow">Para profesionales</span>
 
-        <article class="card">
-          <h3>01. Explora</h3>
+            <h2>Haz que más personas descubran tu trabajo.</h2>
 
-          <p>
-            Revisa perfiles y descubre profesionales
-            de distintas áreas.
-          </p>
-        </article>
+            <p>
+              Presenta tus conocimientos, muestra tus servicios y construye
+              una presencia profesional dentro de MetrionPartners.
+            </p>
 
-        <article class="card">
-          <h3>02. Conoce</h3>
+            <ul>
+              <li>Un perfil para mostrar tu experiencia.</li>
+              <li>Visibilidad por área de especialidad.</li>
+              <li>Opciones de presencia destacada.</li>
+            </ul>
 
-          <p>
-            Consulta sus especialidades, experiencia
-            y servicios disponibles.
-          </p>
-        </article>
+            <a href="#contacto" class="btn">
+              Solicitar información
+            </a>
+          </div>
 
-        <article class="card">
-          <h3>03. Contacta</h3>
+          <div class="membership-decoration" aria-hidden="true">
+            <div class="membership-orbit orbit-one"></div>
+            <div class="membership-orbit orbit-two"></div>
+            <div class="membership-symbol">M<span>+</span></div>
+          </div>
 
-          <p>
-            Utiliza los medios de contacto publicados
-            por cada profesional para consultar sus servicios.
-          </p>
-        </article>
+        </div>
 
       </div>
-
     </section>
 
 
-    <!-- MEMBRESÍAS PARA PROFESIONALES -->
-    <section>
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <div class="container contact-inner">
 
-      <h2>Haz visible tu experiencia</h2>
+        <div>
+          <span class="section-eyebrow">Conectemos</span>
 
-      <p>
-        Forma parte de un directorio diseñado para dar a conocer
-        tus conocimientos y servicios profesionales.
-      </p>
-
-      <div class="cards">
-
-        <article class="card">
-          <h3>Presencia profesional</h3>
+          <h2>¿Buscas un profesional o quieres formar parte del directorio?</h2>
 
           <p>
-            Cuenta con un perfil propio para presentar
-            tu especialidad y tus servicios.
+            Explora las áreas disponibles o solicita información sobre
+            cómo presentar tu perfil profesional.
           </p>
-        </article>
+        </div>
 
-        <article class="card">
-          <h3>Mayor visibilidad</h3>
+        <div class="contact-actions">
+          <a href="#profesionales" class="btn">
+            Explorar perfiles
+          </a>
 
-          <p>
-            Accede a opciones de posicionamiento destacado
-            dentro de las categorías.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Espacio en portada</h3>
-
-          <p>
-            Solicita una de las seis plazas comerciales
-            reservadas para profesionales destacados.
-          </p>
-        </article>
+          <a href="mailto:contacto@metrionpartners.com" class="btn btn-outline">
+            Contactar
+          </a>
+        </div>
 
       </div>
-
-      <a href="membresias.html" class="btn">
-        Ver planes y membresías
-      </a>
-
     </section>
 
   </main>
 
 
   <!-- PIE DE PÁGINA -->
-  <footer>
+  <footer class="footer">
+    <div class="container footer-inner">
 
-    <div class="footer-logo">
-      Metrion<span>Partners</span>
+      <a class="logo" href="index.html">
+        Metrion<span>Partners</span>
+      </a>
+
+      <p>
+        Un espacio para conectar conocimiento, experiencia y oportunidades.
+      </p>
+
+      <div class="footer-links">
+        <a href="categorias/docentes.html">Docentes</a>
+        <a href="categorias/asesores.html">Asesores</a>
+        <a href="categorias/consultoria.html">Consultoría</a>
+        <a href="#membresias">Para profesionales</a>
+      </div>
+
+      <p class="copyright">
+        © 2026 MetrionPartners. Todos los derechos reservados.
+      </p>
+
     </div>
-
-    <p>
-      Directorio de profesionales, docentes,
-      asesores y especialistas.
-    </p>
-
-    <p>
-      Conocimiento que conecta personas.
-    </p>
-
-    <p>
-      <a href="membresias.html">Membresías</a>
-      &nbsp; | &nbsp;
-      <a href="index.html">Inicio</a>
-    </p>
-
-    <p>
-      © 2026 MetrionPartners. Todos los derechos reservados.
-    </p>
-
   </footer>
 
 
   <script src="js/main.js"></script>
 
 </body>
-    </html>
+</html>
