@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MetrionPartners | Directorio de profesionales</title>
+  <title>MetrionPartners | Encuentra al profesional que necesitas</title>
 
   <meta
     name="description"
-    content="Encuentra docentes, asesores, consultores y especialistas. Explora áreas de conocimiento y descubre oportunidades profesionales en MetrionPartners."
+    content="Encuentra docentes, asesores, especialistas técnicos y creativos. Describe lo que necesitas y conecta con profesionales independientes en MetrionPartners."
   >
 
   <meta name="theme-color" content="#101a35">
@@ -44,10 +44,10 @@
 
       <nav id="mainNav" aria-label="Navegación principal">
         <a href="index.html" aria-current="page">Inicio</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#profesionales">Profesionales</a>
         <a href="categorias/docentes.html">Docentes</a>
         <a href="categorias/asesores.html">Asesores</a>
-        <a href="categorias/consultoria.html">Consultoría</a>
-        <a href="#categorias">Especialidades</a>
         <a href="#membresias">Para profesionales</a>
       </nav>
 
@@ -57,24 +57,23 @@
 
   <main>
 
-    <!-- PORTADA -->
+    <!-- 1 · PRIORIDAD MÁXIMA: ¿Qué necesitas resolver? -->
     <section class="directory-hero">
       <div class="container directory-hero-inner">
 
         <div class="hero-content">
 
           <span class="hero-badge">
-            Profesionales · Conocimiento · Conexiones
+            Profesionales independientes · Soluciones reales
           </span>
 
           <h1>
-            Encuentra a la persona indicada para lo que necesitas.
+            ¿Qué necesitas resolver?
           </h1>
 
           <p>
-            Explora perfiles de docentes, asesores, consultores y
-            especialistas. Encuentra conocimientos y servicios que
-            te ayuden a avanzar.
+            Profesionales independientes listos para ayudarte a aprender,
+            tomar mejores decisiones, resolver lo técnico o crear tus proyectos.
           </p>
 
           <form
@@ -89,14 +88,14 @@
               class="visually-hidden"
               for="professionalQuery"
             >
-              Buscar profesionales por nombre o especialidad
+              Buscar por servicio, área o especialidad
             </label>
 
             <input
               type="search"
               id="professionalQuery"
               name="q"
-              placeholder="Nombre, área o especialidad"
+              placeholder="¿Qué servicio estás buscando?"
               autocomplete="off"
               aria-controls="professionalGrid"
             >
@@ -108,18 +107,18 @@
           </form>
 
           <p class="hero-note">
-            Docencia, tecnología, negocios, ciencias y más.
+            Docencia · Asesoría · Tecnología · Creación y más
           </p>
 
         </div>
 
 
-        <!-- TARJETA DESTACADA -->
+        <!-- TARJETA LATERAL -->
         <aside class="hero-side-card">
 
           <div class="hero-card-top">
             <span class="hero-card-label">
-              UNA RED DE CONOCIMIENTO
+              ENCUENTRA AL ESPECIALISTA
             </span>
 
             <span class="hero-card-icon" aria-hidden="true">
@@ -128,12 +127,12 @@
           </div>
 
           <h2>
-            El talento adecuado puede cambiarlo todo.
+            La persona adecuada puede cambiarlo todo.
           </h2>
 
           <p>
-            Encuentra experiencia, conocimientos y servicios
-            especializados en distintas áreas profesionales.
+            Explora perfiles reales, conoce sus especialidades
+            y contacta directamente a quien mejor se adapte a tu necesidad.
           </p>
 
           <div class="mini-avatars" aria-hidden="true">
@@ -143,8 +142,8 @@
             <span>+</span>
           </div>
 
-          <a href="#profesionales" class="hero-card-link">
-            Explorar el directorio
+          <a href="#soluciones" class="hero-card-link">
+            Ver tipos de ayuda
             <span aria-hidden="true">→</span>
           </a>
 
@@ -154,7 +153,70 @@
     </section>
 
 
-    <!-- DIRECTORIO -->
+    <!-- 2 · EXPLORAR SOLUCIONES -->
+    <section
+      class="categories-section"
+      id="soluciones"
+      aria-labelledby="solutionsTitle"
+    >
+
+      <div class="container">
+
+        <div class="directory-heading">
+          <div>
+            <span class="section-eyebrow">
+              Explora soluciones
+            </span>
+
+            <h2 id="solutionsTitle">
+              ¿Qué tipo de ayuda necesitas?
+            </h2>
+
+            <p>
+              Elige la categoría que mejor describe tu necesidad.
+              Te llevaremos a los profesionales disponibles.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="category-grid solutions-grid">
+
+          <a class="category-item solution-card" href="categorias/docentes.html">
+            <span class="category-icon" aria-hidden="true">✎</span>
+            <span class="category-name">Aprender y capacitarme</span>
+            <span class="category-desc">Clases, cursos y preparación académica</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-item solution-card" href="categorias/asesores.html">
+            <span class="category-icon" aria-hidden="true">◎</span>
+            <span class="category-name">Recibir asesoría</span>
+            <span class="category-desc">Orientación especializada para tomar decisiones</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-item solution-card" href="categorias/especialistas.html">
+            <span class="category-icon" aria-hidden="true">⌘</span>
+            <span class="category-name">Resolver algo técnico</span>
+            <span class="category-desc">Informática, programación y tecnología</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="category-item solution-card" href="#profesionales">
+            <span class="category-icon" aria-hidden="true">✦</span>
+            <span class="category-name">Crear o producir</span>
+            <span class="category-desc">Diseño, audio, fotografía y proyectos creativos</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 3 · PROFESIONALES DESTACADOS -->
     <section
       class="directory-section"
       id="profesionales"
@@ -167,7 +229,7 @@
 
           <div>
             <span class="section-eyebrow">
-              Directorio profesional
+              Contacto directo
             </span>
 
             <h2 id="directoryTitle">
@@ -175,7 +237,8 @@
             </h2>
 
             <p>
-              Explora áreas de conocimiento, experiencia y servicios.
+              Perfiles reales con sus especialidades, servicios y medios de contacto.
+              Elige a quién consultar.
             </p>
           </div>
 
@@ -190,229 +253,228 @@
         </div>
 
 
-<div class="directory-demo-notice">
-  Los perfiles identificados como ejemplos son ilustrativos.
-</div>
+        <div class="directory-demo-notice">
+          Los perfiles identificados como ejemplos son ilustrativos.
+        </div>
 
-<div class="directory-grid" id="professionalGrid">
+        <div class="directory-grid" id="professionalGrid">
 
-  <!-- TU PERFIL -->
-  <article
-    class="professional-card founder-card"
-    data-search="fundador docente asesor finanzas informática ingeniería de audio producción musical tecnología programación"
-  >
-    <div class="profile-picture">
-      <img
-        src="img/fundador.jpg"
-        alt="Fotografía profesional del fundador de MetrionPartners"
-        class="profile-photo"
-        width="400"
-        height="400"
-        loading="eager"
-      >
-    </div>
+          <!-- PERFIL REAL: FUNDADOR -->
+          <article
+            class="professional-card founder-card"
+            data-search="fundador docente asesor finanzas informática ingeniería de audio producción musical tecnología programación"
+          >
+            <div class="profile-picture">
+              <img
+                src="img/fundador.img"
+                alt="Fotografía profesional del fundador de MetrionPartners"
+                class="profile-photo"
+                width="400"
+                height="400"
+                loading="eager"
+              >
+            </div>
 
-    <span class="profile-status">Fundador</span>
+            <span class="profile-status">Fundador</span>
 
-    <h3>Ing. Dio Josue Salazar Medina</h3>
+            <h3>Ing. Dio Josue Salazar Medina</h3>
 
-    <p class="profile-role">
-      Docente, asesor y especialista
-    </p>
+            <p class="profile-role">
+              Docente, asesor y especialista
+            </p>
 
-    <div class="profile-tags">
-      <span>Finanzas</span>
-      <span>Informática</span>
-      <span>Audio profesional</span>
-    </div>
+            <div class="profile-tags">
+              <span>Finanzas</span>
+              <span>Informática</span>
+              <span>Audio profesional</span>
+            </div>
 
-    <a href="#contacto" class="profile-button">
-      Contactar <span aria-hidden="true">→</span>
-    </a>
-  </article>
-
-
-  <!-- EJEMPLO: DOCENCIA -->
-  <article
-    class="professional-card"
-    data-search="docencia matemáticas ciencias educación asesoría académica"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">Do</span>
-    </div>
-
-    <span class="profile-status">Ejemplo · Docencia</span>
-    <h3>Perfil de docente</h3>
-
-    <p class="profile-role">
-      Matemáticas y ciencias
-    </p>
-
-    <div class="profile-tags">
-      <span>Matemáticas</span>
-      <span>Ciencias</span>
-    </div>
-
-    <a href="categorias/docentes.html" class="profile-button">
-      Explorar docentes <span aria-hidden="true">→</span>
-    </a>
-  </article>
+            <a href="#contacto" class="profile-button">
+              Contactar <span aria-hidden="true">→</span>
+            </a>
+          </article>
 
 
-  <!-- EJEMPLO: FINANZAS -->
-  <article
-    class="professional-card"
-    data-search="asesoría finanzas contabilidad impuestos administración"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">$</span>
-    </div>
+          <!-- EJEMPLO: DOCENCIA -->
+          <article
+            class="professional-card"
+            data-search="docencia matemáticas ciencias educación asesoría académica clases cursos"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">Do</span>
+            </div>
 
-    <span class="profile-status">Ejemplo · Finanzas</span>
-    <h3>Perfil de asesor financiero</h3>
+            <span class="profile-status">Ejemplo · Docencia</span>
+            <h3>Perfil de docente</h3>
 
-    <p class="profile-role">
-      Finanzas y contabilidad
-    </p>
+            <p class="profile-role">
+              Matemáticas y ciencias
+            </p>
 
-    <div class="profile-tags">
-      <span>Finanzas</span>
-      <span>Contabilidad</span>
-    </div>
+            <div class="profile-tags">
+              <span>Matemáticas</span>
+              <span>Ciencias</span>
+            </div>
 
-    <a href="categorias/asesores.html" class="profile-button">
-      Explorar asesores <span aria-hidden="true">→</span>
-    </a>
-  </article>
-
-
-  <!-- EJEMPLO: TECNOLOGÍA -->
-  <article
-    class="professional-card"
-    data-search="ingeniería sistemas programación tecnología software informática"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">&lt;/&gt;</span>
-    </div>
-
-    <span class="profile-status">Ejemplo · Tecnología</span>
-    <h3>Perfil de especialista tecnológico</h3>
-
-    <p class="profile-role">
-      Sistemas y programación
-    </p>
-
-    <div class="profile-tags">
-      <span>Programación</span>
-      <span>Sistemas</span>
-    </div>
-
-    <a href="especialidades/tecnologia.html" class="profile-button">
-      Explorar tecnología <span aria-hidden="true">→</span>
-    </a>
-  </article>
+            <a href="categorias/docentes.html" class="profile-button">
+              Ver docentes <span aria-hidden="true">→</span>
+            </a>
+          </article>
 
 
-  <!-- EJEMPLO: AUDIO -->
-  <article
-    class="professional-card"
-    data-search="producción musical ingeniería audio sonido grabación mezcla"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">♫</span>
-    </div>
+          <!-- EJEMPLO: ASESORÍA -->
+          <article
+            class="professional-card"
+            data-search="asesoría finanzas contabilidad impuestos administración orientación"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">$</span>
+            </div>
 
-    <span class="profile-status">Ejemplo · Audio</span>
-    <h3>Perfil de especialista en audio</h3>
+            <span class="profile-status">Ejemplo · Asesoría</span>
+            <h3>Perfil de asesor</h3>
 
-    <p class="profile-role">
-      Producción musical y sonido
-    </p>
+            <p class="profile-role">
+              Finanzas y contabilidad
+            </p>
 
-    <div class="profile-tags">
-      <span>Audio</span>
-      <span>Producción musical</span>
-    </div>
+            <div class="profile-tags">
+              <span>Finanzas</span>
+              <span>Contabilidad</span>
+            </div>
 
-    <a href="especialidades/ingenieria.html" class="profile-button">
-      Explorar ingeniería <span aria-hidden="true">→</span>
-    </a>
-  </article>
-
-
-  <!-- EJEMPLO: CONSULTORÍA -->
-  <article
-    class="professional-card"
-    data-search="consultoría estrategia negocios administración organización empresarial"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">↗</span>
-    </div>
-
-    <span class="profile-status">Ejemplo · Consultoría</span>
-    <h3>Perfil de consultor</h3>
-
-    <p class="profile-role">
-      Estrategia y negocios
-    </p>
-
-    <div class="profile-tags">
-      <span>Estrategia</span>
-      <span>Negocios</span>
-    </div>
-
-    <a href="categorias/consultoria.html" class="profile-button">
-      Explorar consultoría <span aria-hidden="true">→</span>
-    </a>
-  </article>
+            <a href="categorias/asesores.html" class="profile-button">
+              Ver asesores <span aria-hidden="true">→</span>
+            </a>
+          </article>
 
 
-  <!-- EJEMPLO: SALUD -->
-  <article
-    class="professional-card"
-    data-search="salud bienestar orientación servicios profesionales"
-  >
-    <div class="profile-picture profile-placeholder-box">
-      <span aria-hidden="true">+</span>
-    </div>
+          <!-- EJEMPLO: TECNOLOGÍA -->
+          <article
+            class="professional-card"
+            data-search="ingeniería sistemas programación tecnología software informática técnico"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">&lt;/&gt;</span>
+            </div>
 
-    <span class="profile-status">Ejemplo · Bienestar</span>
-    <h3>Perfil de especialista en bienestar</h3>
+            <span class="profile-status">Ejemplo · Técnico</span>
+            <h3>Especialista tecnológico</h3>
 
-    <p class="profile-role">
-      Salud y bienestar
-    </p>
+            <p class="profile-role">
+              Sistemas y programación
+            </p>
 
-    <div class="profile-tags">
-      <span>Salud</span>
-      <span>Bienestar</span>
-    </div>
+            <div class="profile-tags">
+              <span>Programación</span>
+              <span>Sistemas</span>
+            </div>
 
-    <a href="especialidades/salud.html" class="profile-button">
-      Explorar salud <span aria-hidden="true">→</span>
-    </a>
-  </article>
+            <a href="categorias/especialistas.html" class="profile-button">
+              Ver especialistas <span aria-hidden="true">→</span>
+            </a>
+          </article>
 
-</div>
 
-<div class="no-results" id="noResults" hidden>
-  <h3>No encontramos coincidencias</h3>
-  <p>Prueba con otro nombre, especialidad o área de conocimiento.</p>
-  <button class="btn" id="clearSearch" type="button">
-    Ver todos los perfiles
-  </button>
-</div>
-        
+          <!-- EJEMPLO: AUDIO / CREACIÓN -->
+          <article
+            class="professional-card"
+            data-search="producción musical ingeniería audio sonido grabación mezcla crear producir"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">♫</span>
+            </div>
+
+            <span class="profile-status">Ejemplo · Creación</span>
+            <h3>Especialista en audio</h3>
+
+            <p class="profile-role">
+              Producción musical y sonido
+            </p>
+
+            <div class="profile-tags">
+              <span>Audio</span>
+              <span>Producción</span>
+            </div>
+
+            <a href="#profesionales" class="profile-button">
+              Ver perfiles <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+
+          <!-- EJEMPLO: CONSULTORÍA -->
+          <article
+            class="professional-card"
+            data-search="consultoría estrategia negocios administración organización empresarial asesoría"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">↗</span>
+            </div>
+
+            <span class="profile-status">Ejemplo · Consultoría</span>
+            <h3>Perfil de consultor</h3>
+
+            <p class="profile-role">
+              Estrategia y negocios
+            </p>
+
+            <div class="profile-tags">
+              <span>Estrategia</span>
+              <span>Negocios</span>
+            </div>
+
+            <a href="categorias/asesores.html" class="profile-button">
+              Ver asesores <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+
+          <!-- EJEMPLO: BIENESTAR -->
+          <article
+            class="professional-card"
+            data-search="salud bienestar orientación servicios profesionales"
+          >
+            <div class="profile-picture profile-placeholder-box">
+              <span aria-hidden="true">+</span>
+            </div>
+
+            <span class="profile-status">Ejemplo · Bienestar</span>
+            <h3>Especialista en bienestar</h3>
+
+            <p class="profile-role">
+              Salud y bienestar
+            </p>
+
+            <div class="profile-tags">
+              <span>Salud</span>
+              <span>Bienestar</span>
+            </div>
+
+            <a href="#profesionales" class="profile-button">
+              Ver perfiles <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="no-results" id="noResults" hidden>
+          <h3>No encontramos coincidencias</h3>
+          <p>Prueba con otro nombre, especialidad o área de conocimiento.</p>
+          <button class="btn" id="clearSearch" type="button">
+            Ver todos los perfiles
+          </button>
+        </div>
 
       </div>
     </section>
 
 
-    <!-- ESPECIALIDADES -->
+    <!-- 4 · CONFIANZA: Cómo funciona -->
     <section
-      class="categories-section"
-      id="categorias"
-      aria-labelledby="categoriesTitle"
+      class="categories-section trust-section"
+      id="como-funciona"
+      aria-labelledby="trustTitle"
     >
 
       <div class="container">
@@ -420,69 +482,56 @@
         <div class="directory-heading">
           <div>
             <span class="section-eyebrow">
-              Explora por área
+              Transparencia
             </span>
 
-            <h2 id="categoriesTitle">
-              Encuentra tu especialidad
+            <h2 id="trustTitle">
+              Encuentra profesionales con información clara
             </h2>
 
             <p>
-              Accede a las áreas de conocimiento del directorio.
+              Así funciona el directorio y cómo puedes contactar a cada profesional.
             </p>
           </div>
         </div>
 
+        <div class="category-grid trust-grid">
 
-        <div class="category-grid">
+          <div class="category-item trust-card">
+            <span class="category-icon" aria-hidden="true">1</span>
+            <span class="category-name">Describe tu necesidad</span>
+            <span class="category-desc">
+              Usa el buscador o elige el tipo de ayuda que buscas.
+              Te mostramos perfiles relevantes.
+            </span>
+          </div>
 
-          <a class="category-item" href="especialidades/educacion.html">
-            <span class="category-icon" aria-hidden="true">✎</span>
-            <span class="category-name">Educación</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="category-item trust-card">
+            <span class="category-icon" aria-hidden="true">2</span>
+            <span class="category-name">Revisa perfiles reales</span>
+            <span class="category-desc">
+              Cada profesional publica sus especialidades,
+              experiencia y servicios de forma clara.
+            </span>
+          </div>
 
-          <a class="category-item" href="especialidades/tecnologia.html">
-            <span class="category-icon" aria-hidden="true">⌘</span>
-            <span class="category-name">Tecnología</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="category-item trust-card">
+            <span class="category-icon" aria-hidden="true">3</span>
+            <span class="category-name">Contacta directamente</span>
+            <span class="category-desc">
+              Habla con el profesional sin intermediarios.
+              Tú decides con quién trabajar.
+            </span>
+          </div>
 
-          <a class="category-item" href="especialidades/negocios.html">
-            <span class="category-icon" aria-hidden="true">$</span>
-            <span class="category-name">Negocios y finanzas</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="category-item" href="especialidades/ingenieria.html">
-            <span class="category-icon" aria-hidden="true">⚙</span>
-            <span class="category-name">Ingeniería</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="category-item" href="especialidades/ciencias.html">
-            <span class="category-icon" aria-hidden="true">⚗</span>
-            <span class="category-name">Ciencias</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="category-item" href="especialidades/humanidades.html">
-            <span class="category-icon" aria-hidden="true">◇</span>
-            <span class="category-name">Humanidades</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="category-item" href="especialidades/salud.html">
-            <span class="category-icon" aria-hidden="true">✚</span>
-            <span class="category-name">Salud y bienestar</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="category-item" href="especialidades/turismo.html">
-            <span class="category-icon" aria-hidden="true">⌁</span>
-            <span class="category-name">Turismo y hospitalidad</span>
-            <span class="category-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="category-item trust-card">
+            <span class="category-icon" aria-hidden="true">4</span>
+            <span class="category-name">Generas una oportunidad</span>
+            <span class="category-desc">
+              El profesional recibe una oportunidad de trabajo.
+              Tú obtienes la ayuda que necesitabas.
+            </span>
+          </div>
 
         </div>
 
@@ -490,7 +539,7 @@
     </section>
 
 
-    <!-- MEMBRESÍAS -->
+    <!-- MEMBRESÍAS (secundaria) -->
     <section
       class="membership-section"
       id="membresias"
@@ -508,18 +557,17 @@
             </span>
 
             <h2 id="membershipTitle">
-              Haz que más personas descubran tu trabajo.
+              ¿Eres profesional y quieres aparecer aquí?
             </h2>
 
             <p>
-              Presenta tus conocimientos, muestra tus servicios y
-              construye una presencia profesional dentro de
-              MetrionPartners.
+              Publica tu perfil, muestra tus servicios y recibe
+              oportunidades de trabajo de personas que buscan exactamente lo que ofreces.
             </p>
 
             <ul>
-              <li>Un perfil para mostrar tu experiencia.</li>
-              <li>Visibilidad por área de especialidad.</li>
+              <li>Perfil profesional visible en el directorio.</li>
+              <li>Aparición por categoría y especialidad.</li>
               <li>Opciones de presencia destacada.</li>
             </ul>
 
@@ -557,22 +605,21 @@
           </span>
 
           <h2 id="contactTitle">
-            ¿Buscas un profesional o quieres formar parte del directorio?
+            ¿Listo para encontrar al profesional adecuado?
           </h2>
 
           <p>
-            Solicita información sobre el directorio y las opciones
-            para presentar un perfil profesional.
+            Explora los perfiles o escríbenos si tienes una consulta
+            sobre el directorio.
           </p>
         </div>
 
         <div class="contact-actions">
 
           <a href="#profesionales" class="btn">
-            Explorar perfiles
+            Ver profesionales
           </a>
 
-          <!-- Sustituye este correo si utilizarás otra dirección -->
           <a
             href="mailto:contacto@metrionpartners.com?subject=Informaci%C3%B3n%20sobre%20MetrionPartners"
             class="btn btn-outline"
@@ -583,7 +630,7 @@
         </div>
 
       </div>
-  </section>
+    </section>
 
   </main>
 
@@ -601,14 +648,15 @@
       </a>
 
       <p>
-        Un espacio para conectar conocimiento, experiencia y oportunidades.
+        Conectamos personas que necesitan ayuda con profesionales
+        independientes listos para ofrecerla.
       </p>
 
       <div class="footer-links">
+        <a href="#soluciones">Soluciones</a>
         <a href="categorias/docentes.html">Docentes</a>
         <a href="categorias/asesores.html">Asesores</a>
-        <a href="categorias/consultoria.html">Consultoría</a>
-        <a href="#categorias">Especialidades</a>
+        <a href="categorias/especialistas.html">Especialistas</a>
         <a href="#membresias">Para profesionales</a>
       </div>
 
@@ -623,8 +671,8 @@
   <!-- JAVASCRIPT PRINCIPAL -->
   <script src="js/main.js"></script>
 
-  <!-- Compatibilidad de búsqueda y botón para limpiar filtros -->
-  <script>
+  <!-- Búsqueda simple (se mantiene para cuando haya más perfiles) -->
+<script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("directorySearch");
       const input = document.getElementById("professionalQuery");
@@ -670,7 +718,6 @@
             : " perfiles de muestra");
 
         noResults.hidden = visible !== 0;
-
         grid.hidden = visible === 0;
       }
 
