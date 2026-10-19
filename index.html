@@ -1,577 +1,486 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MetrionPartners | Encuentra conocimiento y profesionales</title>
+    <title>MetrionPartners | Docentes, Asesores y Especialistas</title>
 
-    <meta name="description" content="Encuentra docentes, asesores y profesionales especializados en matemáticas, tecnología, idiomas, contabilidad, finanzas y otras áreas. Descubre conocimientos y servicios para avanzar.">
+    <meta name="description" content="Encuentra docentes, asesores y profesionales especializados en matemáticas, tecnología, idiomas, contabilidad, finanzas y otras áreas de conocimiento.">
 
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0b1220">
-
     <link rel="canonical" href="https://metrionpartners.com/">
-    <link rel="stylesheet" href="css/style.css">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
     <meta property="og:site_name" content="MetrionPartners">
-    <meta property="og:title" content="MetrionPartners | Conocimiento que conecta">
-    <meta property="og:description" content="Encuentra docentes, asesores y especialistas. Explora áreas de conocimiento y servicios profesionales.">
+    <meta property="og:title" content="MetrionPartners | Encuentra especialistas">
+    <meta property="og:description" content="Conecta con docentes, asesores y profesionales que pueden ayudarte a aprender, resolver problemas y desarrollar tus habilidades.">
     <meta property="og:url" content="https://metrionpartners.com/">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <!-- HEADER -->
     <header class="header">
-        <div class="container">
 
-            <a href="index.html" class="logo" aria-label="MetrionPartners, inicio">
-                Metrion<span>Partners</span>
-            </a>
+        <a href="index.html" class="logo">
+            Metrion<span>Partners</span>
+        </a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Abrir menú"
-                aria-controls="mainNav"
-                aria-expanded="false"
-                type="button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir o cerrar menú"
+            aria-controls="mainNav"
+            aria-expanded="false">
+            ☰
+        </button>
 
-            <nav id="mainNav" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#profesionales">Profesionales</a></li>
-                    <li><a href="#como-funciona">Cómo funciona</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#registro" class="btn">Soy profesional</a></li>
-                </ul>
-            </nav>
+        <nav id="mainNav">
+            <a href="#especialidades">Especialidades</a>
+            <a href="#profesionales">Profesionales</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#comunidad">Comunidad</a>
+            <a href="#registro">Soy profesional</a>
+        </nav>
 
-        </div>
     </header>
 
 
-    <main>
+    <!-- HERO -->
+    <section class="hero">
 
-        <!-- HERO PRINCIPAL -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
+        <div class="hero-content">
 
-                    <span class="section-tag">
-                        Conocimiento · Especialización · Oportunidades
-                    </span>
+            <h1>
+                Encuentra el conocimiento que necesitas.
+                <span>Conecta con especialistas.</span>
+            </h1>
 
-                    <h1>
-                        El conocimiento adecuado puede cambiar tu siguiente paso.
-                    </h1>
+            <p>
+                Descubre docentes, asesores y profesionales que pueden
+                ayudarte a aprender, resolver problemas y avanzar en
+                tus objetivos académicos, personales y profesionales.
+            </p>
 
-                    <p>
-                        Encuentra docentes, asesores y profesionales que pueden
-                        ayudarte a aprender, resolver problemas y desarrollar
-                        nuevas habilidades.
-                    </p>
+            <a href="#especialidades" class="btn">
+                Explorar especialidades
+            </a>
 
-                    <div class="hero-buttons">
-                        <a href="#especialidades" class="btn">
-                            Explorar especialidades
-                        </a>
+        </div>
 
-                        <a href="#profesionales" class="btn btn-secondary">
-                            Descubrir profesionales
-                        </a>
-                    </div>
+    </section>
 
-                    <p class="hero-note">
-                        Educación, tecnología, finanzas y servicios especializados
-                        en un mismo espacio.
-                    </p>
 
-                </div>
-            </div>
-        </section>
+    <!-- PROPUESTA DE VALOR -->
+    <section>
 
+        <h2>Conocimiento que se convierte en soluciones</h2>
 
-        <!-- PROPUESTA DE VALOR -->
-        <section class="section" id="nosotros">
-            <div class="container">
+        <div class="cards">
 
-                <div class="section-header">
-                    <span class="section-tag">Nuestra propuesta</span>
+            <article class="card">
 
-                    <h2>Conecta con el conocimiento que necesitas</h2>
+                <h3>Aprende algo nuevo</h3>
 
-                    <p>
-                        MetrionPartners reúne distintas áreas de conocimiento
-                        y servicios profesionales para facilitar la búsqueda
-                        de personas con experiencia y preparación en temas
-                        específicos.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">01</div>
-
-                        <h3>Aprende</h3>
-
-                        <p>
-                            Encuentra apoyo académico, clases particulares,
-                            preparación para exámenes y capacitación práctica.
-                        </p>
-
-                        <a href="categorias/docentes.html">
-                            Explorar docentes
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">02</div>
-
-                        <h3>Resuelve</h3>
-
-                        <p>
-                            Explora opciones de asesoría en contabilidad,
-                            impuestos, finanzas y otras necesidades específicas.
-                        </p>
-
-                        <a href="categorias/asesores.html">
-                            Explorar asesores
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">03</div>
-
-                        <h3>Desarrolla</h3>
-
-                        <p>
-                            Descubre especialistas que pueden ayudarte a
-                            fortalecer habilidades y avanzar en tus proyectos.
-                        </p>
-
-                        <a href="categorias/consultoria.html">
-                            Explorar consultoría
-                        </a>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ÁREAS PRIORITARIAS -->
-        <section class="section section-alt" id="especialidades">
-            <div class="container">
-
-                <div class="section-header">
-                    <span class="section-tag">Áreas destacadas</span>
-
-                    <h2>Empieza por lo que necesitas resolver</h2>
-
-                    <p>
-                        Explora áreas con aplicaciones académicas, personales
-                        y profesionales. Cada especialidad responde a distintas
-                        necesidades y puede incluir docentes, asesores o
-                        profesionales, según el servicio ofrecido.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">∑</div>
-
-                        <h3>Matemáticas y apoyo académico</h3>
-
-                        <p>
-                            Matemáticas, física, química, estadística,
-                            regularización y preparación para exámenes.
-                        </p>
-
-                        <a href="especialidades/ciencias.html">
-                            Explorar ciencias y matemáticas
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">⌘</div>
-
-                        <h3>Tecnología y programación</h3>
-
-                        <p>
-                            Programación, desarrollo web, inteligencia
-                            artificial, Excel, datos y herramientas digitales.
-                        </p>
-
-                        <a href="especialidades/tecnologia.html">
-                            Explorar tecnología
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">$</div>
-
-                        <h3>Contabilidad e impuestos</h3>
-
-                        <p>
-                            Contabilidad, costos, obligaciones fiscales,
-                            presupuestos y orientación para negocios.
-                        </p>
-
-                        <a href="especialidades/negocios.html">
-                            Explorar negocios y finanzas
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">Aa</div>
-
-                        <h3>Idiomas y comunicación</h3>
-
-                        <p>
-                            Idiomas, conversación, comprensión, escritura
-                            y preparación para certificaciones.
-                        </p>
-
-                        <a href="especialidades/humanidades.html">
-                            Explorar humanidades
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">↗</div>
-
-                        <h3>Finanzas personales e inversiones</h3>
-
-                        <p>
-                            Organización financiera, ahorro, análisis de
-                            inversiones y planificación patrimonial.
-                        </p>
-
-                        <a href="especialidades/negocios.html">
-                            Explorar negocios y finanzas
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">◇</div>
-
-                        <h3>Negocios y habilidades profesionales</h3>
-
-                        <p>
-                            Administración, marketing, ventas, emprendimiento,
-                            gestión y desarrollo de competencias laborales.
-                        </p>
-
-                        <a href="especialidades/negocios.html">
-                            Explorar negocios
-                        </a>
-                    </article>
-
-                </div>
-
-                <div class="section-cta">
-                    <a href="asignaturas.html" class="btn btn-secondary">
-                        Explorar asignaturas
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- DIRECTORIO PROFESIONAL -->
-        <section class="section" id="profesionales">
-            <div class="container">
-
-                <div class="section-header">
-                    <span class="section-tag">Directorio profesional</span>
-
-                    <h2>Encuentra el perfil que se adapta a tu necesidad</h2>
-
-                    <p>
-                        Diferentes formas de aprender, recibir orientación
-                        o encontrar conocimientos especializados.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <h3>Docentes</h3>
-
-                        <p>
-                            Profesores que ofrecen clases, tutorías,
-                            regularización y formación en distintas materias.
-                        </p>
-
-                        <a href="categorias/docentes.html">
-                            Ver área docente
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <h3>Asesores</h3>
-
-                        <p>
-                            Profesionales que orientan sobre problemas
-                            concretos y ayudan a evaluar posibles soluciones.
-                        </p>
-
-                        <a href="categorias/asesores.html">
-                            Ver área de asesoría
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <h3>Consultores y especialistas</h3>
-
-                        <p>
-                            Perfiles enfocados en proyectos, procesos,
-                            necesidades técnicas y objetivos profesionales.
-                        </p>
-
-                        <a href="categorias/consultoria.html">
-                            Ver consultoría
-                        </a>
-                    </article>
-
-                </div>
-
-                <p class="section-note">
-                    La disponibilidad de perfiles y servicios dependerá de
-                    las especialidades incorporadas al directorio.
+                <p>
+                    Encuentra clases particulares, tutorías, regularización
+                    académica y capacitación para desarrollar habilidades.
                 </p>
 
-            </div>
-        </section>
+                <a href="categorias/docentes.html">
+                    Explorar docentes →
+                </a>
 
+            </article>
 
-        <!-- MODELO DE FUNCIONAMIENTO -->
-        <section class="section section-alt" id="como-funciona">
-            <div class="container">
+            <article class="card">
 
-                <div class="section-header">
-                    <span class="section-tag">Cómo funciona</span>
+                <h3>Resuelve tus dudas</h3>
 
-                    <h2>Una búsqueda más clara y especializada</h2>
-
-                    <p>
-                        El objetivo es facilitar el encuentro entre personas
-                        que necesitan conocimientos específicos y profesionales
-                        que ofrecen servicios relacionados.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">01</div>
-
-                        <h3>Identifica tu necesidad</h3>
-
-                        <p>
-                            Define si buscas aprender una materia, resolver
-                            una duda, recibir asesoría o desarrollar un proyecto.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">02</div>
-
-                        <h3>Explora las especialidades</h3>
-
-                        <p>
-                            Consulta las áreas disponibles y revisa los perfiles
-                            que correspondan a lo que necesitas.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">03</div>
-
-                        <h3>Contacta al profesional</h3>
-
-                        <p>
-                            Consulta los servicios publicados y acuerda
-                            directamente los detalles con el profesional,
-                            según las opciones de contacto disponibles.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- INVITACIÓN A PROFESIONALES -->
-        <section class="section" id="registro">
-            <div class="container">
-
-                <div class="section-header">
-                    <span class="section-tag">Para docentes y profesionales</span>
-
-                    <h2>Haz visible tu experiencia</h2>
-
-                    <p>
-                        MetrionPartners busca construir un directorio
-                        especializado con perfiles de docentes, asesores
-                        y profesionales que ofrecen servicios concretos.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <h3>Una presencia profesional</h3>
-
-                        <p>
-                            Presenta tu experiencia, tus especialidades,
-                            los servicios que ofreces y las modalidades
-                            en las que puedes atender.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>Un directorio selectivo</h3>
-
-                        <p>
-                            Las solicitudes de incorporación estarán sujetas
-                            a revisión. El objetivo es mantener un catálogo
-                            pertinente y cuidar la calidad de los perfiles.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3>Acceso mediante membresía</h3>
-
-                        <p>
-                            La publicación de perfiles estará sujeta a
-                            aprobación y a una membresía activa conforme
-                            a las condiciones que establezca la plataforma.
-                        </p>
-                    </article>
-
-                </div>
-
-                <div class="section-cta">
-                    <a href="registro.html" class="btn">
-                        Solicitar incorporación
-                    </a>
-                </div>
-
-                <p class="section-note">
-                    La solicitud no garantiza la aceptación ni la obtención
-                    de clientes. Las condiciones de membresía se comunicarán
-                    antes de formalizar la incorporación.
+                <p>
+                    Explora profesionales que ofrecen asesoría en temas
+                    contables, fiscales, financieros y otras áreas.
                 </p>
 
-            </div>
-        </section>
+                <a href="categorias/asesores.html">
+                    Explorar asesores →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Desarrolla tus proyectos</h3>
+
+                <p>
+                    Encuentra conocimientos especializados para mejorar
+                    procesos, adquirir competencias y avanzar profesionalmente.
+                </p>
+
+                <a href="categorias/consultoria.html">
+                    Explorar consultoría →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
 
 
-        <!-- PRINCIPIOS DE LA PLATAFORMA -->
-        <section class="section section-alt">
-            <div class="container">
+    <!-- ESPECIALIDADES PRIORITARIAS -->
+    <section id="especialidades">
 
-                <div class="section-header">
-                    <span class="section-tag">Nuestra visión</span>
+        <h2>Explora nuestras especialidades</h2>
 
-                    <h2>Más que un listado de nombres</h2>
+        <div class="cards">
 
-                    <p>
-                        Queremos desarrollar un espacio organizado por
-                        especialidades, donde sea más sencillo encontrar
-                        conocimientos y servicios relevantes.
-                    </p>
-                </div>
+            <article class="card">
 
-                <div class="cards">
+                <h3>Matemáticas y apoyo académico</h3>
 
-                    <article class="card">
-                        <h3>Especialización</h3>
+                <p>
+                    Matemáticas, física, química, estadística, regularización
+                    escolar y preparación para exámenes.
+                </p>
 
-                        <p>
-                            Categorías claras para que cada persona encuentre
-                            perfiles relacionados con su necesidad.
-                        </p>
-                    </article>
+                <a href="especialidades/ciencias.html">
+                    Explorar especialidad →
+                </a>
 
-                    <article class="card">
-                        <h3>Perfiles revisados</h3>
+            </article>
 
-                        <p>
-                            Un proceso de admisión orientado a revisar las
-                            solicitudes y la información presentada.
-                        </p>
-                    </article>
+            <article class="card">
 
-                    <article class="card">
-                        <h3>Desarrollo progresivo</h3>
+                <h3>Tecnología y programación</h3>
 
-                        <p>
-                            Una plataforma que podrá ampliar sus herramientas
-                            de búsqueda, contacto y gestión conforme crezca.
-                        </p>
-                    </article>
+                <p>
+                    Programación, desarrollo web, inteligencia artificial,
+                    Excel, análisis de datos y herramientas digitales.
+                </p>
 
-                </div>
-            </div>
-        </section>
+                <a href="especialidades/tecnologia.html">
+                    Explorar especialidad →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Contabilidad e impuestos</h3>
+
+                <p>
+                    Contabilidad, costos, obligaciones fiscales,
+                    presupuestos y orientación para negocios.
+                </p>
+
+                <a href="especialidades/negocios.html">
+                    Explorar especialidad →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Idiomas y comunicación</h3>
+
+                <p>
+                    Aprendizaje de idiomas, conversación, comprensión,
+                    escritura y preparación para certificaciones.
+                </p>
+
+                <a href="especialidades/humanidades.html">
+                    Explorar especialidad →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Finanzas personales e inversiones</h3>
+
+                <p>
+                    Organización del dinero, ahorro, planificación
+                    financiera y conocimientos sobre inversiones.
+                </p>
+
+                <a href="especialidades/negocios.html">
+                    Explorar especialidad →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Negocios y desarrollo profesional</h3>
+
+                <p>
+                    Administración, marketing, ventas, emprendimiento
+                    y habilidades para el entorno laboral.
+                </p>
+
+                <a href="especialidades/negocios.html">
+                    Explorar especialidad →
+                </a>
+
+            </article>
+
+        </div>
+
+        <p style="text-align:center; margin-top:35px;">
+            <a href="asignaturas.html" class="btn">
+                Explorar más áreas de conocimiento
+            </a>
+        </p>
+
+    </section>
 
 
-        <!-- LLAMADO FINAL -->
-        <section class="section">
-            <div class="container">
+    <!-- DIRECTORIO -->
+    <section id="profesionales">
 
-                <div class="section-header">
-                    <h2>El siguiente paso empieza con el conocimiento adecuado</h2>
+        <h2>Encuentra el perfil adecuado para ti</h2>
 
-                    <p>
-                        Explora las áreas disponibles y encuentra el tipo
-                        de ayuda profesional que estás buscando.
-                    </p>
+        <div class="cards">
 
-                    <a href="#especialidades" class="btn">
-                        Explorar especialidades
-                    </a>
-                </div>
+            <article class="card">
 
-            </div>
-        </section>
+                <h3>Docentes</h3>
 
-    </main>
+                <p>
+                    Profesores que ofrecen clases, tutorías y formación
+                    en distintas materias y niveles educativos.
+                </p>
+
+                <a href="categorias/docentes.html">
+                    Conocer el área docente →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Asesores</h3>
+
+                <p>
+                    Especialistas que ayudan a comprender situaciones,
+                    evaluar opciones y tomar decisiones informadas.
+                </p>
+
+                <a href="categorias/asesores.html">
+                    Conocer el área de asesoría →
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Consultores y profesionales</h3>
+
+                <p>
+                    Personas con conocimientos especializados que ofrecen
+                    servicios para atender necesidades y proyectos concretos.
+                </p>
+
+                <a href="categorias/consultoria.html">
+                    Conocer consultoría →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
 
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-        <div class="container">
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona">
 
-            <div class="footer-content">
+        <h2>Una forma sencilla de encontrar conocimiento</h2>
 
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        Metrion<span>Partners</span>
-                    </a>
+        <div class="cards">
 
-                    <p>
-                        Conocimiento, especialización y servicios profesionales
-                        en un mismo espacio.
-                    </p>
-                </div>
+            <article class="card">
 
-                <div class="footer-links">
-                    <h3>Explorar</h3>
+                <h3>01. Identifica tu necesidad</h3>
 
-                    <ul>
-                        <li><a href="#especialidades">Especia
+                <p>
+                    Determina qué necesitas aprender, resolver o mejorar.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>02. Explora las especialidades</h3>
+
+                <p>
+                    Consulta las áreas disponibles y encuentra perfiles
+                    relacionados con tu objetivo.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>03. Contacta al especialista</h3>
+
+                <p>
+                    Revisa la información publicada y consulta las
+                    condiciones del servicio directamente con el profesional.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTRO DE PROFESIONALES -->
+    <section id="registro">
+
+        <h2>¿Eres docente, asesor o especialista?</h2>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <h3>Presenta tu experiencia</h3>
+
+                <p>
+                    Da a conocer tus conocimientos, especialidades,
+                    servicios, experiencia y modalidades de atención.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Forma parte de un directorio selectivo</h3>
+
+                <p>
+                    Las solicitudes serán revisadas antes de aceptar
+                    nuevos perfiles. Buscamos construir un catálogo
+                    organizado y especializado.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Publicación mediante membresía</h3>
+
+                <p>
+                    Los perfiles estarán sujetos a aprobación y a una
+                    membresía activa, de acuerdo con las condiciones
+                    que establezca MetrionPartners.
+                </p>
+
+            </article>
+
+        </div>
+
+        <p style="text-align:center; margin-top:35px;">
+            <a href="registro.html" class="btn">
+                Solicitar incorporación
+            </a>
+        </p>
+
+        <p style="text-align:center; margin-top:20px; color:#555;">
+            La aceptación está sujeta a revisión. La membresía no garantiza
+            un número determinado de contactos, clientes o ingresos.
+        </p>
+
+    </section>
+
+
+    <!-- COMUNIDAD -->
+    <section class="newsletter" id="comunidad">
+
+        <h2>Forma parte de nuestra comunidad</h2>
+
+        <p>
+            Recibe novedades sobre nuevas especialidades, profesionales
+            incorporados y oportunidades para aprender y desarrollar
+            tus conocimientos.
+        </p>
+
+        <form id="subscribeForm">
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+                autocomplete="email"
+                required>
+
+            <select id="interest" name="interest" required>
+                <option value="">¿Qué te interesa?</option>
+                <option value="estudiante">Clases y apoyo académico</option>
+                <option value="tecnologia">Tecnología y programación</option>
+                <option value="finanzas">Finanzas y contabilidad</option>
+                <option value="idiomas">Idiomas y comunicación</option>
+                <option value="negocios">Negocios y desarrollo profesional</option>
+                <option value="profesional">Publicar mis servicios</option>
+                <option value="general">Otras especialidades</option>
+            </select>
+
+            <button type="submit">
+                Quiero recibir novedades
+            </button>
+
+        </form>
+
+        <p>
+            Al enviar tus datos, aceptas recibir comunicaciones relacionadas
+            con MetrionPartners. La suscripción deberá conectarse a un sistema
+            de gestión de contactos para almacenar y administrar los registros.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            Metrion<span>Partners</span>
+        </div>
+
+        <p>
+            Conocimiento, especialización y servicios profesionales.
+        </p>
+
+        <p style="margin-top:15px;">
+            <a href="index.html">Inicio</a> ·
+            <a href="categorias/docentes.html">Docentes</a> ·
+            <a href="categorias/asesores.html">Asesores</a> ·
+            <a href="asignaturas.html">Asignaturas</a>
+        </p>
+
+        <p style="margin-top:20px;">
+            © 2026 MetrionPartners. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
