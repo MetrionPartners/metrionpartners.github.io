@@ -1,22 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MetrionPartners | Encuentra profesionales y especialistas</title>
-
-  <meta
-    name="description"
-    content="Encuentra docentes, asesores, consultores y especialistas en MetrionPartners. Conecta con profesionales de distintas áreas."
-  >
-
+  <title>MetrionPartners | Directorio de profesionales</title>
+  <meta name="description" content="Encuentra docentes, asesores, consultores y especialistas en MetrionPartners. Conecta con profesionales de distintas áreas.">
   <meta name="theme-color" content="#101a35">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -70,9 +62,8 @@
           </h1>
 
           <p>
-            Explora perfiles de docentes, asesores, consultores y
-            especialistas. Encuentra conocimientos y servicios que
-            te ayuden a avanzar.
+            Explora perfiles de docentes, asesores, consultores y especialistas.
+            Encuentra conocimientos y servicios que te ayuden a avanzar.
           </p>
 
           <form
@@ -81,14 +72,14 @@
             role="search"
           >
             <label class="visually-hidden" for="professionalQuery">
-              Buscar profesionales por nombre, área o especialidad
+              Buscar profesionales por nombre o especialidad
             </label>
 
             <input
               type="search"
               id="professionalQuery"
               name="q"
-              placeholder="¿Qué necesitas encontrar?"
+              placeholder="Nombre, área o especialidad"
               autocomplete="off"
             >
 
@@ -104,42 +95,50 @@
         </div>
 
 
-        <div class="hero-side-card">
+        <!-- TARJETA SECUNDARIA CORREGIDA -->
+        <aside class="hero-side-card">
 
           <div class="hero-card-top">
-            <span class="hero-card-label">Conocimiento especializado</span>
-            <span class="hero-card-icon">✦</span>
+            <span class="hero-card-label">
+              UNA RED DE CONOCIMIENTO
+            </span>
+
+            <span class="hero-card-icon" aria-hidden="true">✦</span>
           </div>
 
-          <h2>Las conexiones correctas abren nuevas posibilidades.</h2>
+          <h2>
+            El talento adecuado puede cambiarlo todo.
+          </h2>
 
           <p>
-            Un espacio para descubrir profesionales y acercarte
-            al conocimiento que estás buscando.
+            Descubre personas con conocimientos, experiencia y servicios
+            que pueden ayudarte a alcanzar tus objetivos.
           </p>
 
           <div class="mini-avatars" aria-hidden="true">
-            <span>EM</span>
-            <span>CM</span>
-            <span>VC</span>
+            <span>Do</span>
+            <span>As</span>
+            <span>Es</span>
             <span>+</span>
           </div>
 
           <a href="#profesionales" class="hero-card-link">
-            Explorar profesionales <span>→</span>
+            Descubrir profesionales
+            <span aria-hidden="true">→</span>
           </a>
 
-        </div>
+        </aside>
 
       </div>
     </section>
 
 
-    <!-- PROFESIONALES -->
+    <!-- DIRECTORIO PROFESIONAL -->
     <section class="directory-section" id="profesionales">
       <div class="container directory-container">
 
         <div class="directory-heading">
+
           <div>
             <span class="section-eyebrow">Directorio profesional</span>
             <h2>Profesionales destacados</h2>
@@ -151,6 +150,7 @@
           <span class="result-count" id="resultCount">
             7 perfiles
           </span>
+
         </div>
 
 
@@ -163,17 +163,10 @@
           >
 
             <div class="profile-picture">
-              <!-- Sustituye este bloque por tu fotografía cuando la tengas. -->
               <span class="photo-placeholder" aria-label="Fotografía pendiente">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="38"
-                  height="38"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
+                <svg viewBox="0 0 24 24" width="38" height="38"
+                  fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
                   <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                   <circle cx="8.5" cy="10" r="1.5"></circle>
                   <path d="m21 15-5-5L5 19"></path>
@@ -220,12 +213,8 @@
             </div>
 
             <span class="profile-status">Docencia</span>
-
             <h3>Dra. Elena Martínez</h3>
-
-            <p class="profile-role">
-              Docente de matemáticas y ciencias
-            </p>
+            <p class="profile-role">Docente de matemáticas y ciencias</p>
 
             <div class="profile-tags">
               <span>Matemáticas</span>
@@ -257,12 +246,8 @@
             </div>
 
             <span class="profile-status">Asesoría</span>
-
             <h3>Carlos Mendoza</h3>
-
-            <p class="profile-role">
-              Asesor financiero y contable
-            </p>
+            <p class="profile-role">Asesor financiero y contable</p>
 
             <div class="profile-tags">
               <span>Finanzas</span>
@@ -294,12 +279,8 @@
             </div>
 
             <span class="profile-status">Tecnología</span>
-
             <h3>Ing. Valeria Cruz</h3>
-
-            <p class="profile-role">
-              Especialista en sistemas y programación
-            </p>
+            <p class="profile-role">Especialista en sistemas y programación</p>
 
             <div class="profile-tags">
               <span>Programación</span>
@@ -331,12 +312,8 @@
             </div>
 
             <span class="profile-status">Audio profesional</span>
-
             <h3>Miguel Herrera</h3>
-
-            <p class="profile-role">
-              Especialista en producción musical
-            </p>
+            <p class="profile-role">Especialista en producción musical</p>
 
             <div class="profile-tags">
               <span>Audio</span>
@@ -368,12 +345,8 @@
             </div>
 
             <span class="profile-status">Consultoría</span>
-
             <h3>Sofía Ramírez</h3>
-
-            <p class="profile-role">
-              Consultora en estrategia y negocios
-            </p>
+            <p class="profile-role">Consultora en estrategia y negocios</p>
 
             <div class="profile-tags">
               <span>Estrategia</span>
@@ -405,12 +378,8 @@
             </div>
 
             <span class="profile-status">Bienestar</span>
-
             <h3>Andrea Torres</h3>
-
-            <p class="profile-role">
-              Especialista en salud y bienestar
-            </p>
+            <p class="profile-role">Especialista en salud y bienestar</p>
 
             <div class="profile-tags">
               <span>Salud</span>
@@ -446,60 +415,59 @@
             <span class="section-eyebrow">Explora por área</span>
             <h2>Encuentra tu especialidad</h2>
             <p>
-              Accede a las áreas de conocimiento disponibles en el directorio.
+              Accede a las áreas de conocimiento del directorio.
             </p>
           </div>
         </div>
 
-
         <div class="category-grid">
 
           <a class="category-item" href="especialidades/educacion.html">
-            <span class="category-icon">✎</span>
+            <span class="category-icon" aria-hidden="true">✎</span>
             <span class="category-name">Educación</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/tecnologia.html">
-            <span class="category-icon">⌘</span>
+            <span class="category-icon" aria-hidden="true">⌘</span>
             <span class="category-name">Tecnología</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/negocios.html">
-            <span class="category-icon">$</span>
+            <span class="category-icon" aria-hidden="true">$</span>
             <span class="category-name">Negocios y finanzas</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/ingenieria.html">
-            <span class="category-icon">⚙</span>
+            <span class="category-icon" aria-hidden="true">⚙</span>
             <span class="category-name">Ingeniería</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/ciencias.html">
-            <span class="category-icon">⚗</span>
+            <span class="category-icon" aria-hidden="true">⚗</span>
             <span class="category-name">Ciencias</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/humanidades.html">
-            <span class="category-icon">◇</span>
+            <span class="category-icon" aria-hidden="true">◇</span>
             <span class="category-name">Humanidades</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/salud.html">
-            <span class="category-icon">✚</span>
+            <span class="category-icon" aria-hidden="true">✚</span>
             <span class="category-name">Salud y bienestar</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="category-item" href="especialidades/turismo.html">
-            <span class="category-icon">⌁</span>
+            <span class="category-icon" aria-hidden="true">⌁</span>
             <span class="category-name">Turismo y hospitalidad</span>
-            <span class="category-arrow">↗</span>
+            <span class="category-arrow" aria-hidden="true">↗</span>
           </a>
 
         </div>
@@ -508,16 +476,19 @@
     </section>
 
 
-    <!-- MEMBRESÍAS -->
+    <!-- PARA PROFESIONALES -->
     <section class="membership-section" id="membresias">
       <div class="container">
 
         <div class="membership-panel">
 
           <div class="membership-content">
+
             <span class="section-eyebrow">Para profesionales</span>
 
-            <h2>Haz que más personas descubran tu trabajo.</h2>
+            <h2>
+              Haz que más personas descubran tu trabajo.
+            </h2>
 
             <p>
               Presenta tus conocimientos, muestra tus servicios y construye
@@ -531,8 +502,9 @@
             </ul>
 
             <a href="#contacto" class="btn">
-              Solicitar información
+              Solicitar información <span aria-hidden="true">→</span>
             </a>
+
           </div>
 
           <div class="membership-decoration" aria-hidden="true">
@@ -554,7 +526,9 @@
         <div>
           <span class="section-eyebrow">Conectemos</span>
 
-          <h2>¿Buscas un profesional o quieres formar parte del directorio?</h2>
+          <h2>
+            ¿Buscas un profesional o quieres formar parte del directorio?
+          </h2>
 
           <p>
             Explora las áreas disponibles o solicita información sobre
@@ -567,7 +541,10 @@
             Explorar perfiles
           </a>
 
-          <a href="mailto:contacto@metrionpartners.com" class="btn btn-outline">
+          <a
+            href="mailto:contacto@metrionpartners.com"
+            class="btn btn-outline"
+          >
             Contactar
           </a>
         </div>
@@ -608,4 +585,5 @@
   <script src="js/main.js"></script>
 
 </body>
-</html>
+              </html>
+                                           
