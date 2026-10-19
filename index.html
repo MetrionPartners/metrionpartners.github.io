@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -63,6 +64,10 @@
 
         <div class="hero-content">
 
+          <span class="hero-badge">
+            Profesionales · Conocimiento · Conexiones
+          </span>
+
           <h1>
             Encuentra a la persona indicada para lo que necesitas.
           </h1>
@@ -71,6 +76,40 @@
             Explora perfiles de docentes, asesores, consultores y
             especialistas. Encuentra conocimientos y servicios que
             te ayuden a avanzar.
+          </p>
+
+          <form
+            class="directory-search"
+            id="directorySearch"
+            role="search"
+            action="#profesionales"
+            method="get"
+          >
+
+            <label
+              class="visually-hidden"
+              for="professionalQuery"
+            >
+              Buscar profesionales por nombre o especialidad
+            </label>
+
+            <input
+              type="search"
+              id="professionalQuery"
+              name="q"
+              placeholder="Nombre, área o especialidad"
+              autocomplete="off"
+              aria-controls="professionalGrid"
+            >
+
+            <button class="btn" type="submit">
+              Buscar
+            </button>
+
+          </form>
+
+          <p class="hero-note">
+            Docencia, tecnología, negocios, ciencias y más.
           </p>
 
         </div>
@@ -97,6 +136,13 @@
             Encuentra experiencia, conocimientos y servicios
             especializados en distintas áreas profesionales.
           </p>
+
+          <div class="mini-avatars" aria-hidden="true">
+            <span>Do</span>
+            <span>As</span>
+            <span>Es</span>
+            <span>+</span>
+          </div>
 
           <a href="#profesionales" class="hero-card-link">
             Explorar el directorio
@@ -649,4 +695,118 @@
         </div>
 
       </div>
-    </se
+  </section>
+
+  </main>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <a
+        class="logo"
+        href="index.html"
+        aria-label="MetrionPartners, inicio"
+      >
+        Metrion<span>Partners</span>
+      </a>
+
+      <p>
+        Un espacio para conectar conocimiento, experiencia y oportunidades.
+      </p>
+
+      <div class="footer-links">
+        <a href="categorias/docentes.html">Docentes</a>
+        <a href="categorias/asesores.html">Asesores</a>
+        <a href="categorias/consultoria.html">Consultoría</a>
+        <a href="#categorias">Especialidades</a>
+        <a href="#membresias">Para profesionales</a>
+      </div>
+
+      <p class="copyright">
+        © 2026 MetrionPartners. Todos los derechos reservados.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT PRINCIPAL -->
+  <script src="js/main.js"></script>
+
+  <!-- Compatibilidad de búsqueda y botón para limpiar filtros -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("directorySearch");
+      const input = document.getElementById("professionalQuery");
+      const grid = document.getElementById("professionalGrid");
+      const count = document.getElementById("resultCount");
+      const noResults = document.getElementById("noResults");
+      const clearButton = document.getElementById("clearSearch");
+
+      if (!form || !input || !grid || !count || !noResults) return;
+
+      const cards = Array.from(
+        grid.querySelectorAll(".professional-card")
+      );
+
+      function normalize(value) {
+        return value
+          .toLocaleLowerCase("es")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .trim();
+      }
+
+      function filterProfiles() {
+        const query = normalize(input.value);
+        let visible = 0;
+
+        cards.forEach(function (card) {
+          const searchableText = normalize(
+            card.innerText + " " + (card.dataset.search || "")
+          );
+
+          const matches =
+            query === "" || searchableText.includes(query);
+
+          card.hidden = !matches;
+
+          if (matches) visible++;
+        });
+
+        count.textContent =
+          visible + (visible === 1
+            ? " perfil de muestra"
+            : " perfiles de muestra");
+
+        noResults.hidden = visible !== 0;
+
+        grid.hidden = visible === 0;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        filterProfiles();
+
+        document.getElementById("profesionales")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      input.addEventListener("input", filterProfiles);
+
+      if (clearButton) {
+        clearButton.addEventListener("click", function () {
+          input.value = "";
+          filterProfiles();
+          input.focus();
+        });
+      }
+
+      filterProfiles();
+    });
+  </script>
+
+</body>
+</html>
