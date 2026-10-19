@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MetrionPartners | Directorio de profesionales</title>
-  <meta name="description" content="Encuentra docentes, asesores, consultores y especialistas en MetrionPartners. Conecta con profesionales de distintas áreas.">
+
+  <meta
+    name="description"
+    content="Encuentra docentes, asesores, consultores y especialistas. Explora áreas de conocimiento y descubre oportunidades profesionales en MetrionPartners."
+  >
+
   <meta name="theme-color" content="#101a35">
+  <meta name="robots" content="index, follow">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +24,11 @@
   <header class="header">
     <div class="container">
 
-      <a class="logo" href="index.html" aria-label="MetrionPartners, inicio">
+      <a
+        class="logo"
+        href="index.html"
+        aria-label="MetrionPartners, página de inicio"
+      >
         Metrion<span>Partners</span>
       </a>
 
@@ -33,7 +44,7 @@
       </button>
 
       <nav id="mainNav" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
+        <a href="index.html" aria-current="page">Inicio</a>
         <a href="categorias/docentes.html">Docentes</a>
         <a href="categorias/asesores.html">Asesores</a>
         <a href="categorias/consultoria.html">Consultoría</a>
@@ -62,16 +73,23 @@
           </h1>
 
           <p>
-            Explora perfiles de docentes, asesores, consultores y especialistas.
-            Encuentra conocimientos y servicios que te ayuden a avanzar.
+            Explora perfiles de docentes, asesores, consultores y
+            especialistas. Encuentra conocimientos y servicios que
+            te ayuden a avanzar.
           </p>
 
           <form
             class="directory-search"
             id="directorySearch"
             role="search"
+            action="#profesionales"
+            method="get"
           >
-            <label class="visually-hidden" for="professionalQuery">
+
+            <label
+              class="visually-hidden"
+              for="professionalQuery"
+            >
               Buscar profesionales por nombre o especialidad
             </label>
 
@@ -81,11 +99,13 @@
               name="q"
               placeholder="Nombre, área o especialidad"
               autocomplete="off"
+              aria-controls="professionalGrid"
             >
 
             <button class="btn" type="submit">
               Buscar
             </button>
+
           </form>
 
           <p class="hero-note">
@@ -95,7 +115,7 @@
         </div>
 
 
-        <!-- TARJETA SECUNDARIA CORREGIDA -->
+        <!-- TARJETA DESTACADA -->
         <aside class="hero-side-card">
 
           <div class="hero-card-top">
@@ -103,7 +123,9 @@
               UNA RED DE CONOCIMIENTO
             </span>
 
-            <span class="hero-card-icon" aria-hidden="true">✦</span>
+            <span class="hero-card-icon" aria-hidden="true">
+              ✦
+            </span>
           </div>
 
           <h2>
@@ -111,8 +133,8 @@
           </h2>
 
           <p>
-            Descubre personas con conocimientos, experiencia y servicios
-            que pueden ayudarte a alcanzar tus objetivos.
+            Encuentra experiencia, conocimientos y servicios
+            especializados en distintas áreas profesionales.
           </p>
 
           <div class="mini-avatars" aria-hidden="true">
@@ -123,7 +145,7 @@
           </div>
 
           <a href="#profesionales" class="hero-card-link">
-            Descubrir profesionales
+            Explorar el directorio
             <span aria-hidden="true">→</span>
           </a>
 
@@ -133,25 +155,47 @@
     </section>
 
 
-    <!-- DIRECTORIO PROFESIONAL -->
-    <section class="directory-section" id="profesionales">
+    <!-- DIRECTORIO -->
+    <section
+      class="directory-section"
+      id="profesionales"
+      aria-labelledby="directoryTitle"
+    >
+
       <div class="container directory-container">
 
         <div class="directory-heading">
 
           <div>
-            <span class="section-eyebrow">Directorio profesional</span>
-            <h2>Profesionales destacados</h2>
+            <span class="section-eyebrow">
+              Directorio profesional
+            </span>
+
+            <h2 id="directoryTitle">
+              Profesionales destacados
+            </h2>
+
             <p>
-              Explora distintas áreas de conocimiento y servicios.
+              Explora áreas de conocimiento, experiencia y servicios.
             </p>
           </div>
 
-          <span class="result-count" id="resultCount">
-            7 perfiles
+          <span
+            class="result-count"
+            id="resultCount"
+            aria-live="polite"
+          >
+            7 perfiles de muestra
           </span>
 
         </div>
+
+
+        <!-- Aviso para evitar confundir ejemplos con perfiles reales -->
+        <p class="directory-demo-notice">
+          Los perfiles que aparecen como demostración son ejemplos
+          ilustrativos y no representan profesionales verificados.
+        </p>
 
 
         <div class="directory-grid" id="professionalGrid">
@@ -159,22 +203,34 @@
           <!-- PERFIL DEL FUNDADOR -->
           <article
             class="professional-card founder-card"
-            data-search="tu nombre profesional fundador docente asesor finanzas informática ingenieria de audio producción musical tecnología programación"
+            data-search="fundador docente asesor finanzas informática ingeniería de audio producción musical tecnología programación"
           >
 
             <div class="profile-picture">
-              <span class="photo-placeholder" aria-label="Fotografía pendiente">
-                <svg viewBox="0 0 24 24" width="38" height="38"
-                  fill="none" stroke="currentColor" stroke-width="1.5"
-                  aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+              <span
+                class="photo-placeholder"
+                role="img"
+                aria-label="Espacio reservado para la fotografía del fundador"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="38"
+                  height="38"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Fundador de MetrionPartners</span>
+            <span class="profile-status">
+              Fundador
+            </span>
 
             <h3>Tu nombre profesional</h3>
 
@@ -189,205 +245,253 @@
             </div>
 
             <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+              Contactar
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: DOCENCIA -->
+          <!-- EJEMPLO: DOCENCIA -->
           <article
             class="professional-card"
-            data-search="elena martínez docente matemáticas ciencias educación asesoría académica"
+            data-search="docencia matemáticas ciencias educación asesoría académica"
           >
 
             <div class="profile-picture">
-              <span class="photo-placeholder" aria-hidden="true">
+              <span
+                class="photo-placeholder"
+                role="img"
+                aria-label="Fotografía de demostración pendiente"
+              >
                 <svg viewBox="0 0 24 24" width="38" height="38"
-                  fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Docencia</span>
-            <h3>Dra. Elena Martínez</h3>
-            <p class="profile-role">Docente de matemáticas y ciencias</p>
+            <span class="profile-status">
+              Ejemplo · Docencia
+            </span>
+
+            <h3>Perfil de docente</h3>
+
+            <p class="profile-role">
+              Ejemplo de docente de matemáticas y ciencias
+            </p>
 
             <div class="profile-tags">
               <span>Matemáticas</span>
               <span>Ciencias</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="categorias/docentes.html" class="profile-button">
+              Explorar docentes
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: FINANZAS -->
+          <!-- EJEMPLO: FINANZAS -->
           <article
             class="professional-card"
-            data-search="carlos mendoza asesor finanzas contabilidad impuestos administración"
+            data-search="asesoría finanzas contabilidad impuestos administración asesor financiero"
           >
 
             <div class="profile-picture">
               <span class="photo-placeholder" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="38" height="38"
                   fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Asesoría</span>
-            <h3>Carlos Mendoza</h3>
-            <p class="profile-role">Asesor financiero y contable</p>
+            <span class="profile-status">
+              Ejemplo · Finanzas
+            </span>
+
+            <h3>Perfil de asesor financiero</h3>
+
+            <p class="profile-role">
+              Ejemplo de asesoría financiera y contable
+            </p>
 
             <div class="profile-tags">
               <span>Finanzas</span>
               <span>Contabilidad</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="categorias/asesores.html" class="profile-button">
+              Explorar asesores
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: TECNOLOGÍA -->
+          <!-- EJEMPLO: TECNOLOGÍA -->
           <article
             class="professional-card"
-            data-search="valeria cruz ingeniera sistemas programación tecnología desarrollo software informática"
+            data-search="ingeniería sistemas programación tecnología desarrollo software informática"
           >
 
             <div class="profile-picture">
               <span class="photo-placeholder" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="38" height="38"
                   fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Tecnología</span>
-            <h3>Ing. Valeria Cruz</h3>
-            <p class="profile-role">Especialista en sistemas y programación</p>
+            <span class="profile-status">
+              Ejemplo · Tecnología
+            </span>
+
+            <h3>Perfil de especialista tecnológico</h3>
+
+            <p class="profile-role">
+              Ejemplo de especialista en sistemas y programación
+            </p>
 
             <div class="profile-tags">
               <span>Programación</span>
               <span>Sistemas</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="especialidades/tecnologia.html" class="profile-button">
+              Explorar tecnología
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: AUDIO -->
+          <!-- EJEMPLO: AUDIO -->
           <article
             class="professional-card"
-            data-search="miguel herrera producción musical ingeniería audio sonido grabación mezcla tecnología musical"
+            data-search="producción musical ingeniería audio sonido grabación mezcla tecnología musical"
           >
 
             <div class="profile-picture">
               <span class="photo-placeholder" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="38" height="38"
                   fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Audio profesional</span>
-            <h3>Miguel Herrera</h3>
-            <p class="profile-role">Especialista en producción musical</p>
+            <span class="profile-status">
+              Ejemplo · Audio
+            </span>
+
+            <h3>Perfil de especialista en audio</h3>
+
+            <p class="profile-role">
+              Ejemplo de producción musical y sonido profesional
+            </p>
 
             <div class="profile-tags">
               <span>Audio</span>
               <span>Producción musical</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="especialidades/ingenieria.html" class="profile-button">
+              Explorar ingeniería
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: CONSULTORÍA -->
+          <!-- EJEMPLO: CONSULTORÍA -->
           <article
             class="professional-card"
-            data-search="sofia ramírez consultoría estrategia negocios administración organización empresarial"
+            data-search="consultoría estrategia negocios administración organización empresarial"
           >
 
             <div class="profile-picture">
               <span class="photo-placeholder" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="38" height="38"
                   fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Consultoría</span>
-            <h3>Sofía Ramírez</h3>
-            <p class="profile-role">Consultora en estrategia y negocios</p>
+            <span class="profile-status">
+              Ejemplo · Consultoría
+            </span>
+
+            <h3>Perfil de consultor</h3>
+
+            <p class="profile-role">
+              Ejemplo de consultoría en estrategia y negocios
+            </p>
 
             <div class="profile-tags">
               <span>Estrategia</span>
               <span>Negocios</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="categorias/consultoria.html" class="profile-button">
+              Explorar consultoría
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
 
 
-          <!-- PERFIL DE EJEMPLO: SALUD -->
+          <!-- EJEMPLO: SALUD -->
           <article
             class="professional-card"
-            data-search="andrea torres salud bienestar orientación servicios profesionales"
+            data-search="salud bienestar orientación servicios profesionales"
           >
 
             <div class="profile-picture">
               <span class="photo-placeholder" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="38" height="38"
                   fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <circle cx="8.5" cy="10" r="1.5"></circle>
-                  <path d="m21 15-5-5L5 19"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <circle cx="8.5" cy="10" r="1.5"/>
+                  <path d="m21 15-5-5L5 19"/>
                 </svg>
               </span>
             </div>
 
-            <span class="profile-status">Bienestar</span>
-            <h3>Andrea Torres</h3>
-            <p class="profile-role">Especialista en salud y bienestar</p>
+            <span class="profile-status">
+              Ejemplo · Bienestar
+            </span>
+
+            <h3>Perfil de especialista en bienestar</h3>
+
+            <p class="profile-role">
+              Ejemplo de servicios de salud y bienestar
+            </p>
 
             <div class="profile-tags">
               <span>Salud</span>
               <span>Bienestar</span>
             </div>
 
-            <a href="#contacto" class="profile-button">
-              Conocer perfil <span>→</span>
+            <a href="especialidades/salud.html" class="profile-button">
+              Explorar salud
+              <span aria-hidden="true">→</span>
             </a>
 
           </article>
@@ -395,11 +499,21 @@
         </div>
 
 
+        <!-- SIN RESULTADOS -->
         <div class="no-results" id="noResults" hidden>
           <h3>No encontramos coincidencias</h3>
+
           <p>
             Prueba con otro nombre, especialidad o área de conocimiento.
           </p>
+
+          <button
+            class="btn"
+            id="clearSearch"
+            type="button"
+          >
+            Ver todos los perfiles
+          </button>
         </div>
 
       </div>
@@ -407,18 +521,30 @@
 
 
     <!-- ESPECIALIDADES -->
-    <section class="categories-section" id="categorias">
+    <section
+      class="categories-section"
+      id="categorias"
+      aria-labelledby="categoriesTitle"
+    >
+
       <div class="container">
 
         <div class="directory-heading">
           <div>
-            <span class="section-eyebrow">Explora por área</span>
-            <h2>Encuentra tu especialidad</h2>
+            <span class="section-eyebrow">
+              Explora por área
+            </span>
+
+            <h2 id="categoriesTitle">
+              Encuentra tu especialidad
+            </h2>
+
             <p>
               Accede a las áreas de conocimiento del directorio.
             </p>
           </div>
         </div>
+
 
         <div class="category-grid">
 
@@ -476,23 +602,31 @@
     </section>
 
 
-    <!-- PARA PROFESIONALES -->
-    <section class="membership-section" id="membresias">
+    <!-- MEMBRESÍAS -->
+    <section
+      class="membership-section"
+      id="membresias"
+      aria-labelledby="membershipTitle"
+    >
+
       <div class="container">
 
         <div class="membership-panel">
 
           <div class="membership-content">
 
-            <span class="section-eyebrow">Para profesionales</span>
+            <span class="section-eyebrow">
+              Para profesionales
+            </span>
 
-            <h2>
+            <h2 id="membershipTitle">
               Haz que más personas descubran tu trabajo.
             </h2>
 
             <p>
-              Presenta tus conocimientos, muestra tus servicios y construye
-              una presencia profesional dentro de MetrionPartners.
+              Presenta tus conocimientos, muestra tus servicios y
+              construye una presencia profesional dentro de
+              MetrionPartners.
             </p>
 
             <ul>
@@ -502,7 +636,8 @@
             </ul>
 
             <a href="#contacto" class="btn">
-              Solicitar información <span aria-hidden="true">→</span>
+              Solicitar información
+              <span aria-hidden="true">→</span>
             </a>
 
           </div>
@@ -520,70 +655,44 @@
 
 
     <!-- CONTACTO -->
-    <section class="contact-section" id="contacto">
+    <section
+      class="contact-section"
+      id="contacto"
+      aria-labelledby="contactTitle"
+    >
+
       <div class="container contact-inner">
 
         <div>
-          <span class="section-eyebrow">Conectemos</span>
+          <span class="section-eyebrow">
+            Conectemos
+          </span>
 
-          <h2>
+          <h2 id="contactTitle">
             ¿Buscas un profesional o quieres formar parte del directorio?
           </h2>
 
           <p>
-            Explora las áreas disponibles o solicita información sobre
-            cómo presentar tu perfil profesional.
+            Solicita información sobre el directorio y las opciones
+            para presentar un perfil profesional.
           </p>
         </div>
 
         <div class="contact-actions">
+
           <a href="#profesionales" class="btn">
             Explorar perfiles
           </a>
 
+          <!-- Sustituye este correo si utilizarás otra dirección -->
           <a
-            href="mailto:contacto@metrionpartners.com"
+            href="mailto:contacto@metrionpartners.com?subject=Informaci%C3%B3n%20sobre%20MetrionPartners"
             class="btn btn-outline"
           >
             Contactar
           </a>
+
         </div>
 
       </div>
-    </section>
-
-  </main>
-
-
-  <!-- PIE DE PÁGINA -->
-  <footer class="footer">
-    <div class="container footer-inner">
-
-      <a class="logo" href="index.html">
-        Metrion<span>Partners</span>
-      </a>
-
-      <p>
-        Un espacio para conectar conocimiento, experiencia y oportunidades.
-      </p>
-
-      <div class="footer-links">
-        <a href="categorias/docentes.html">Docentes</a>
-        <a href="categorias/asesores.html">Asesores</a>
-        <a href="categorias/consultoria.html">Consultoría</a>
-        <a href="#membresias">Para profesionales</a>
-      </div>
-
-      <p class="copyright">
-        © 2026 MetrionPartners. Todos los derechos reservados.
-      </p>
-
-    </div>
-  </footer>
-
-
-  <script src="js/main.js"></script>
-
-</body>
-              </html>
-                                           
+    </se
