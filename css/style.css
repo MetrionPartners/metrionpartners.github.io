@@ -1808,3 +1808,12 @@ main > section:not(
     transform: none;
   }
 }
+
+.category-desc {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
