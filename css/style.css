@@ -1600,3 +1600,211 @@ main > section:not(
     transition-duration: 0.01ms !important;
   }
      }
+
+
+/* =========================================
+   DIRECTORIO PROFESIONAL — AJUSTE VISUAL
+   Fotografías circulares
+   ========================================= */
+
+.directory-demo-notice {
+  margin: 0 0 22px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.professional-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(16, 26, 53, 0.045);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.professional-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(55, 94, 230, 0.35);
+  box-shadow: 0 14px 32px rgba(16, 26, 53, 0.09);
+}
+
+.professional-card[hidden],
+.directory-grid[hidden] {
+  display: none !important;
+}
+
+/* FOTOGRAFÍA CIRCULAR */
+.profile-picture {
+  width: 112px;
+  height: 112px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.profile-placeholder-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.profile-status {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.professional-card h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.professional-card .profile-role {
+  margin: 0 0 18px;
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 22px;
+}
+
+.profile-tags span {
+  display: inline-block;
+  padding: 6px 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.profile-button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.founder-card {
+  border-color: rgba(55, 94, 230, 0.35);
+}
+
+.founder-card .profile-picture {
+  background: var(--background);
+}
+
+.no-results {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.no-results[hidden] {
+  display: none !important;
+}
+
+/* TABLETAS */
+@media (max-width: 1000px) {
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* TELÉFONOS */
+@media (max-width: 600px) {
+  .directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .professional-card {
+    padding: 18px;
+  }
+
+  .profile-picture {
+    width: 104px;
+    height: 104px;
+  }
+
+  .professional-card h3 {
+    font-size: 1.08rem;
+  }
+}
+
+/* ACCESIBILIDAD: MOVIMIENTO REDUCIDO */
+@media (prefers-reduced-motion: reduce) {
+  .professional-card,
+  .profile-button {
+    transition: none;
+  }
+
+  .professional-card:hover {
+    transform: none;
+  }
+}
